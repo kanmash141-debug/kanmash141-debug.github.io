@@ -2,188 +2,138 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101110">
-<meta name="description" content="Kanmash — a product designer with a head full of open tabs. Explore experiments, interfaces, and case studies in an interactive design desktop.">
-<meta property="og:title" content="Kanmash / A Head Full of Tabs">
-<meta property="og:description" content="An interactive portfolio for a curious product designer.">
-<title>KANMASH® — A Head Full of Tabs.</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23101110'/%3E%3Ctext x='10' y='47' font-size='47' font-family='Arial Black,sans-serif' font-weight='900' fill='%23d9fe53'%3EK%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="./style.css">
-<script src="./script.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f0f0eb">
+<meta name="description" content="Kanmash — product designer. Thoughtful interfaces, useful interactions, and experiments worth opening.">
+<meta property="og:title" content="Kanmash — Product & UI/UX designer">
+<meta property="og:description" content="A little bit of design, a little bit of play.">
+<title>Kanmash — Designer, thinker & curious human</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%231b1b1a'/%3E%3Ctext x='13' y='46' fill='%23edece4' font-size='44' font-family='Arial,sans-serif' font-weight='bold'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./style.css?v=3">
+<script defer src="./script.js?v=2"></script>
 </head>
 <body>
 <a class="skip-link" href="#work">Skip to selected work</a>
 <div class="noise" aria-hidden="true"></div>
-<div class="loader" id="loader" aria-hidden="true"><div class="loader-inner"><span>K<span style="color:#ff795d">✳</span></span><span>LOADING IDEAS<br><span id="loadCount">00</span> / 100</span></div></div>
+<div class="loader" id="loader" aria-hidden="true"><div class="loader-inner"><span>k.</span><span>LOADING STUDIO <span id="loadCount">00</span>%</span></div></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="custom-cursor" id="cursor" aria-hidden="true">OPEN ↗</div>
 <header class="topbar">
- <a href="#top" class="wordmark" aria-label="Kanmash, back to top"><span class="brand-symbol" aria-hidden="true">✳</span>KANMASH<span style="color:#d9fe53">®</span></a>
- <div class="topbar-center"><i></i> DESIGNER ONLINE / ALWAYS EXPERIMENTING</div>
- <nav class="topnav" aria-label="Main navigation">
-  <a href="#work">01 / WORK</a>
-  <a href="#playground">02 / PLAY</a>
-  <a href="#about">03 / ABOUT</a>
-  <button id="motionSwitch" type="button" class="motion-btn" aria-label="Toggle website animations" aria-pressed="true"><b aria-hidden="true"></b>MOTION ON</button>
-  <a href="#contact" class="nav-pill">LET'S TALK ↗</a>
- </nav>
+  <a class="wordmark" href="#top" aria-label="Kanmash — back to top"><span class="brand-symbol">k.</span><span>kanmash<span class="wordmark-dot">®</span></span></a>
+  <div class="topbar-center">PRODUCT DESIGNER <span class="nav-divider">/</span> INDIA <span class="status-dot" aria-label="Available to connect"></span></div>
+  <nav class="topnav" aria-label="Main navigation">
+    <a href="#work">Work</a>
+    <a href="#playground">Playground</a>
+    <a href="#about">About</a>
+    <button type="button" class="motion-btn" id="motionSwitch" aria-label="Toggle site animation" aria-pressed="true"><b aria-hidden="true"></b>MOTION ON</button>
+    <a class="nav-pill" href="mailto:pkanmash@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+  </nav>
 </header>
 <main>
 <section class="hero" id="top" aria-labelledby="heroTitle">
- <div class="hero-grid" aria-hidden="true"></div><div class="hero-glow" aria-hidden="true"></div>
- <div class="hero-topline"><span>INTERACTIVE PORTFOLIO <em>●</em> VERSION 02.0</span><span id="clock">NEW DELHI / IST</span></div>
- <div class="hero-body">
-  <div class="hero-words">
-   <div class="supra">HI, I'M KANMASH. I DESIGN DIGITAL EXPERIENCES.</div>
-   <h1 id="heroTitle">
-    <span class="rowline">A HEAD</span>
-    <span class="rowline outline">FULL OF</span>
-    <span class="rowline last">TABS<span class="accent">.</span><span class="micro">and a few very good ideas ↗</span></span>
-   </h1>
-   <p class="subcopy">I'm a <strong>product & UI/UX designer</strong> who likes solving problems, breaking patterns, and making interfaces feel a little more human.</p>
-   <div class="hero-actions"><a class="primary-btn" href="#work">EXPLORE THE TABS <span aria-hidden="true">↘</span></a><a href="#playground" class="plain-btn">OR JUST PLAY A LITTLE ↗</a></div>
-  </div>
-  <div class="hero-desk" aria-label="Two draggable interactive portfolio project windows">
-   <div class="desk-orbit" aria-hidden="true"></div><div class="desk-burst" aria-hidden="true">✳</div>
-   <div class="desk-note" aria-hidden="true">PSST... DRAG THESE</div>
-   <article class="window window-one" aria-label="Google Pay subscription case study preview">
-    <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="window-label">GOOGLE_PAY_EXPERIMENT.fig</span><div class="window-controls"><button type="button" data-open-project="gpay" aria-label="Open Google Pay project">OPEN ↗</button></div></div>
-    <div class="window-inside">
-     <div class="gpay-screen">
-      <div class="gpay-head">GPay / Reimagined <span>CONCEPT 001</span></div>
-      <div class="gpay-bg-label" aria-hidden="true">SUBSCRIPTIONS</div>
-      <div class="gpay-floating">One place.<br>All your plans.<span>✦ A clearer way to keep track</span></div>
-      <span class="gpay-spark" aria-hidden="true">✳</span>
-      <div class="gpay-phone" aria-hidden="true">
-       <div class="phone-heading">Subscriptions <span class="phone-circle"></span></div>
-       <div class="spend-amount">₹1,499</div><div class="spend-label">TOTAL MONTHLY / DEMO</div><div class="meter"><i></i></div>
-       <div class="sub"><span class="subicon">♫</span> MUSIC <b>₹119</b></div><div class="sub"><span class="subicon">▶</span> VIDEO <b>₹649</b></div><div class="sub"><span class="subicon">☁</span> CLOUD <b>₹130</b></div>
-      </div>
-     </div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-topline"><span>INDEPENDENT THOUGHTS & DESIGN EXPERIMENTS</span><span>PORTFOLIO / 2026</span></div>
+  <div class="hero-body">
+    <div class="hero-words reveal">
+      <div class="supra"><span class="hi-mark" aria-hidden="true">✳</span> Hello, glad you're here.</div>
+      <h1 id="heroTitle">I'm <em>Kanmash.</em><br><span>Designer of</span><br><span class="last">little things <span class="hero-asterisk" aria-hidden="true">✳</span></span></h1>
+      <p class="subcopy">I design digital experiences that feel simple, thoughtful, and sometimes a little unexpected. I enjoy the space where <strong>product thinking meets visual play.</strong></p>
+      <div class="hero-actions"><a class="primary-btn" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a href="#about" class="plain-btn">A little about me <span aria-hidden="true">↘</span></a></div>
+      <div class="hero-aside"><span>01 — TWO IDEAS I'VE BEEN WORKING ON</span><span>↓ KEEP SCROLLING</span></div>
     </div>
-    <div class="window-caption"><span>01 / SUBSCRIPTIONS</span><span>OPEN ME ↗</span></div>
-   </article>
-   <article class="window window-two" aria-label="Zoom AI case study preview">
-    <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="window-label">ZOOM_AI_CONCEPT.fig</span><div class="window-controls"><button type="button" data-open-project="zoom" aria-label="Open Zoom AI project">OPEN ↗</button></div></div>
-    <div class="window-inside">
-     <div class="zoom-screen">
-      <div class="zoom-shell">
-       <div class="zoom-grid">
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Design</span></div>
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Research</span></div>
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Product</span></div>
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">You</span></div>
-       </div>
-       <div class="ai-card"><strong>✦ AI companion</strong><p>Notes that keep up.</p><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><span class="ai-badge">✳ 3 key takeaways</span></div>
-      </div>
-      <div class="zoom-foot" aria-hidden="true"><span>◉</span><span>♫</span><span>▣</span><span>✧</span><span>↗</span></div>
-     </div>
+    <div class="hero-desk" aria-label="Draggable interactive project previews">
+      <div class="desk-orbit" aria-hidden="true"></div>
+      <span class="desk-note" aria-hidden="true">psst… you can drag these ↙</span>
+      <article class="window window-one" aria-label="Google Pay subscriptions concept">
+        <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="window-label">Subscriptions — concept</span><div class="window-controls"><button type="button" data-open-project="gpay" aria-label="Open Google Pay project">↗</button></div></div>
+        <div class="window-inside">
+          <div class="gpay-screen">
+            <div class="gpay-head">GPay / Reimagined <span>CONCEPT STUDY</span></div><div class="gpay-bg-label" aria-hidden="true">BETTER TOGETHER</div>
+            <div class="gpay-floating">One place.<br>Every plan.<span>All the little payments, made clearer.</span></div>
+            <div class="gpay-phone" aria-hidden="true"><div class="phone-heading">Subscriptions <span class="phone-circle"></span></div><div class="spend-amount">₹1,499</div><div class="spend-label">MONTHLY TOTAL / EXAMPLE</div><div class="meter"><i></i></div><div class="sub"><span class="subicon">♫</span> Music <b>₹119</b></div><div class="sub"><span class="subicon">▶</span> Video <b>₹649</b></div><div class="sub"><span class="subicon">☁</span> Cloud <b>₹130</b></div></div>
+          </div>
+        </div>
+        <div class="window-caption"><span>01 / GOOGLE PAY</span><span>UI/UX CONCEPT</span></div>
+      </article>
+      <article class="window window-two" aria-label="Zoom AI virtual meeting concept">
+        <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="window-label">Meetings — concept</span><div class="window-controls"><button type="button" data-open-project="zoom" aria-label="Open Zoom AI project">↗</button></div></div>
+        <div class="window-inside">
+          <div class="zoom-screen">
+            <div class="zoom-shell">
+              <div class="zoom-grid"><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Design</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Research</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Product</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">You</span></div></div>
+              <div class="ai-card"><strong>✦ Meeting AI</strong><p>Key points, without the scramble.</p><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><span class="ai-badge">Summary ready</span></div>
+            </div>
+            <div class="zoom-foot" aria-hidden="true"><span>◉</span><span>♫</span><span>▣</span><span>✧</span><span>↗</span></div>
+          </div>
+        </div>
+        <div class="window-caption"><span>02 / ZOOM AI</span><span>UI/UX CONCEPT</span></div>
+      </article>
+      <div class="desk-paper" aria-hidden="true"><span>IDEA NO. 01</span><b>What if<br>it felt easy?</b><small>↳ a question worth asking</small></div>
+      <div class="desk-stamp" aria-hidden="true">✳</div>
     </div>
-    <div class="window-caption"><span>02 / AI + COLLABORATION</span><span>OPEN ME ↗</span></div>
-   </article>
-   <div class="ticket" aria-hidden="true">NOT YOUR USUAL PORTFOLIO <small>BUILT TO BE EXPLORED // 2026</small></div>
   </div>
- </div>
- <div class="hero-footer"><div class="availability">BASED IN INDIA <strong>✳ CURRENTLY MAKING THINGS</strong></div><span>JUST A LITTLE DIFFERENT, BY DESIGN.</span><a class="scroll-ring" href="#work" aria-label="Scroll to selected work">↓</a></div>
+  <div class="hero-footer"><span><span class="availability" aria-hidden="true"></span> CURRENTLY MAKING THINGS</span><span>NEW DELHI, INDIA / <span id="clock">IST</span></span><a href="#work">SCROLL TO DISCOVER ↓</a></div>
 </section>
-<div class="ticker" aria-hidden="true"><div class="ticker-track">
- <span>SCROLL A LITTLE</span><b>✳</b><span>CLICK AROUND</span><b>✳</b><span>HAVE SOME FUN</span><b>✳</b><span>DESIGN IS NOT BORING</span><b>✳</b>
- <span>SCROLL A LITTLE</span><b>✳</b><span>CLICK AROUND</span><b>✳</b><span>HAVE SOME FUN</span><b>✳</b><span>DESIGN IS NOT BORING</span><b>✳</b>
- </div></div>
 <section class="work" id="work" aria-labelledby="workTitle">
- <div class="section-index reveal">01 / SELECTED WORK</div>
- <div class="work-intro reveal"><h2 id="workTitle">SOME TABS<br>ARE <em>WORTH</em><br>KEEPING.</h2><div><span class="asterisk" aria-hidden="true">✳</span><p>Two product concepts built around a question I couldn't stop thinking about. Click a project to take a closer look.</p></div></div>
- <div class="projects">
-  <article class="project project--gpay reveal">
-   <div class="project-text"><div class="project-meta">PROJECT FILE / 001 <span aria-hidden="true">—</span> FINTECH</div>
-    <div><h3>What if Google Pay managed subscriptions?</h3><p>Exploring the idea of a single, clearer place to understand and manage recurring payments.</p><button type="button" class="project-cta" data-open-project="gpay">OPEN PROJECT FILE <span aria-hidden="true">↗</span></button></div>
-    <div class="project-meta">UI/UX CONCEPT <span aria-hidden="true">✳</span> 2026</div>
-   </div>
-   <button type="button" class="project-art project-art--gpay" data-open-project="gpay" data-cursor="VIEW ↗" aria-label="Open Google Pay subscription case study">
-    <div class="backwords" aria-hidden="true">SUBSCRIPTIONS</div><div class="art-badge">01<br>PRODUCT<br>CONCEPT</div>
-    <div class="art-card">
-     <div class="gpay-screen">
-      <div class="gpay-head">GPay / Reimagined <span>PRODUCT CONCEPT</span></div>
-      <div class="gpay-bg-label" aria-hidden="true">MANAGE IT ALL</div>
-      <div class="gpay-floating">Recurring payments,<br>minus the chaos.<span>✳ ONE CLEAR VIEW</span></div>
-      <span class="gpay-spark" aria-hidden="true">✳</span>
-      <div class="gpay-phone" aria-hidden="true">
-       <div class="phone-heading">Subscriptions <span class="phone-circle"></span></div><div class="spend-amount">₹1,499</div><div class="spend-label">TOTAL MONTHLY / DEMO</div><div class="meter"><i></i></div>
-       <div class="sub"><span class="subicon">♫</span>MUSIC<b>₹119</b></div><div class="sub"><span class="subicon">▶</span>VIDEO<b>₹649</b></div><div class="sub"><span class="subicon">☁</span>CLOUD<b>₹130</b></div>
-      </div>
-     </div>
-    </div><div class="art-bottom">CLICK TO EXPLORE</div><div class="project-index-giant" aria-hidden="true">01</div>
-   </button>
-  </article>
-  <article class="project project--zoom reveal">
-   <div class="project-text"><div class="project-meta">PROJECT FILE / 002 <span aria-hidden="true">—</span> AI + COLLABORATION</div>
-    <div><h3>Zoom AI: The virtual meeting, rethought.</h3><p>A product-design concept exploring how AI assistance could fit naturally into online meetings.</p><button type="button" class="project-cta" data-open-project="zoom">OPEN PROJECT FILE <span aria-hidden="true">↗</span></button></div>
-    <div class="project-meta">UI/UX CONCEPT <span aria-hidden="true">✳</span> 2026</div>
-   </div>
-   <button type="button" class="project-art project-art--zoom" data-open-project="zoom" data-cursor="VIEW ↗" aria-label="Open Zoom AI meeting case study">
-    <div class="backwords" aria-hidden="true">MEETING AI</div><div class="art-badge">02<br>PRODUCT<br>CONCEPT</div>
-    <div class="art-card">
-     <div class="zoom-screen">
-      <div class="zoom-shell">
-       <div class="zoom-grid">
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Design</span></div>
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Research</span></div>
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Product</span></div>
-        <div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">You</span></div>
-       </div>
-       <div class="ai-card"><strong>✦ AI companion</strong><p>Notes that keep up.</p><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><span class="ai-badge">✳ 3 key takeaways</span></div>
-      </div><div class="zoom-foot" aria-hidden="true"><span>◉</span><span>♫</span><span>▣</span><span>✧</span><span>↗</span></div>
-     </div>
-    </div><div class="art-bottom">CLICK TO EXPLORE</div><div class="project-index-giant" aria-hidden="true">02</div>
-   </button>
-  </article>
- </div>
+  <div class="section-index reveal">01 <span class="rule"></span> Selected work</div>
+  <div class="work-intro reveal"><div><h2 id="workTitle">A selection of<br><em>things I've made.</em></h2></div><p>A few ideas that started with a question and ended up becoming something you can see, click, and explore.</p></div>
+  <div class="projects">
+    <article class="project project--gpay reveal">
+      <div class="project-text"><div class="project-meta">01 / PRODUCT DESIGN <span>2026</span></div><h3>What if Google Pay managed all our subscriptions?</h3><p>An exploration of a simpler way to see, understand, and manage recurring payments inside an everyday app.</p><button type="button" class="project-cta" data-open-project="gpay">Explore project <span aria-hidden="true">↗</span></button><div class="project-sub">FINTECH <span>—</span> UI/UX CONCEPT</div></div>
+      <button type="button" class="project-art project-art--gpay" data-open-project="gpay" data-cursor="VIEW ↗" aria-label="Open Google Pay case study">
+        <div class="backwords" aria-hidden="true">Simpler.</div><div class="art-badge">CONCEPT<br>01</div>
+        <div class="art-card">
+          <div class="gpay-screen">
+            <div class="gpay-head">GPay / Reimagined <span>SUBSCRIPTIONS</span></div><div class="gpay-bg-label" aria-hidden="true">MANAGE EVERY PLAN</div><div class="gpay-floating">Stay on top<br>of it all.<span>Less switching, more clarity.</span></div>
+            <div class="gpay-phone" aria-hidden="true"><div class="phone-heading">Subscriptions <span class="phone-circle"></span></div><div class="spend-amount">₹1,499</div><div class="spend-label">MONTHLY TOTAL / EXAMPLE</div><div class="meter"><i></i></div><div class="sub"><span class="subicon">♫</span> Music <b>₹119</b></div><div class="sub"><span class="subicon">▶</span> Video <b>₹649</b></div><div class="sub"><span class="subicon">☁</span> Cloud <b>₹130</b></div></div>
+          </div>
+        </div>
+        <span class="art-bottom">Tap to explore project ↗</span>
+      </button>
+    </article>
+    <article class="project project--zoom reveal">
+      <div class="project-text"><div class="project-meta">02 / PRODUCT DESIGN <span>2026</span></div><h3>Zoom AI — rethinking the virtual meeting.</h3><p>Exploring how intelligent assistance might help people collaborate more naturally, with less friction.</p><button type="button" class="project-cta" data-open-project="zoom">Explore project <span aria-hidden="true">↗</span></button><div class="project-sub">AI & COLLABORATION <span>—</span> UI/UX CONCEPT</div></div>
+      <button type="button" class="project-art project-art--zoom" data-open-project="zoom" data-cursor="VIEW ↗" aria-label="Open Zoom AI case study">
+        <div class="backwords" aria-hidden="true">Together.</div><div class="art-badge">CONCEPT<br>02</div>
+        <div class="art-card">
+          <div class="zoom-screen"><div class="zoom-shell"><div class="zoom-grid"><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Design</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Research</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Product</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">You</span></div></div><div class="ai-card"><strong>✦ Meeting AI</strong><p>Key points, without the scramble.</p><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><span class="ai-badge">Summary ready</span></div></div><div class="zoom-foot" aria-hidden="true"><span>◉</span><span>♫</span><span>▣</span><span>✧</span><span>↗</span></div></div>
+        </div>
+        <span class="art-bottom">Tap to explore project ↗</span>
+      </button>
+    </article>
+  </div>
+  <a class="work-extra" href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer">See my earlier portfolio work <span aria-hidden="true">↗</span></a>
 </section>
-<section class="lab" id="playground" aria-labelledby="labTitle">
- <div class="lab-top reveal"><div><div class="section-index">02 / A SIDE QUEST</div><h2 id="labTitle">WORK HARD.<br><em>PLAY</em> HARDER.</h2></div><p class="top-side">PLOT TWIST: THIS PART IS YOURS.<br>EVERY GOOD IDEA STARTS WITH A SCRIBBLE. PICK A COLOUR AND LEAVE YOUR MARK. ↘</p></div>
- <div class="lab-main reveal">
-  <div class="drawing-area" id="drawingArea"><div class="canvas-prompt" aria-hidden="true">A BLANK CANVAS.<br>GO WILD. ↗</div><canvas id="scratchCanvas" aria-label="Interactive freehand sketch canvas. Drag with mouse or finger to draw.">This browser does not support drawing canvas.</canvas><div class="canvas-watermark" aria-hidden="true">YOUR CANVAS / NO WRONG ANSWERS</div></div>
-  <aside class="lab-panel">
-   <div><div class="label">INTERACTIVE EXPERIMENT / 001</div><h3>LEAVE YOUR MARK.</h3><p>No brief. No revisions. Just a few pixels and your imagination.</p></div>
-   <div><div class="label">CHOOSE YOUR INK ↘</div><div class="palette" role="group" aria-label="Drawing color">
-    <button class="swatch" style="--swatch:#141514" data-ink="#141514" aria-label="Black ink" aria-pressed="true" type="button"></button>
-    <button class="swatch" style="--swatch:#f96f55" data-ink="#f96f55" aria-label="Coral ink" aria-pressed="false" type="button"></button>
-    <button class="swatch" style="--swatch:#6556e5" data-ink="#6556e5" aria-label="Purple ink" aria-pressed="false" type="button"></button>
-    <button class="swatch" style="--swatch:#1a968c" data-ink="#1a968c" aria-label="Teal ink" aria-pressed="false" type="button"></button>
-   </div><div class="lab-buttons"><button id="clearCanvas" type="button">↺ START OVER</button><button id="saveCanvas" type="button">↓ SAVE AS PNG</button></div></div>
-  </aside>
- </div>
+<section class="playground" id="playground" aria-labelledby="labTitle">
+  <div class="section-index reveal">02 <span class="rule"></span> A little side quest</div>
+  <div class="playground-heading reveal"><h2 id="labTitle">Sometimes, I just<br><em>like to play.</em></h2><p>A mini canvas tucked into the portfolio. Scribble, sketch, or make something completely pointless. It's yours.</p></div>
+  <div class="lab-main reveal">
+    <div class="drawing-area"><div class="canvas-prompt" aria-hidden="true">Leave a little mark ✳</div><canvas id="scratchCanvas" aria-label="Interactive sketch canvas. Drag to draw.">Your browser doesn't support canvas.</canvas><div class="canvas-watermark" aria-hidden="true">IDEAS DON'T ALWAYS NEED A BRIEF</div></div>
+    <aside class="lab-panel"><div><span class="label">A SMALL EXPERIMENT / NO. 01</span><h3>Your turn.</h3><p>Pick a colour and draw something. There are no rules here.</p></div><div><span class="label">PICK A COLOUR</span><div class="palette" role="group" aria-label="Ink colour"><button type="button" class="swatch" style="--swatch:#141514" data-ink="#141514" aria-label="Black ink" aria-pressed="true"></button><button type="button" class="swatch" style="--swatch:#d86b5a" data-ink="#d86b5a" aria-label="Coral ink" aria-pressed="false"></button><button type="button" class="swatch" style="--swatch:#6b69ac" data-ink="#6b69ac" aria-label="Lilac ink" aria-pressed="false"></button><button type="button" class="swatch" style="--swatch:#528e83" data-ink="#528e83" aria-label="Green ink" aria-pressed="false"></button></div><div class="lab-buttons"><button type="button" id="clearCanvas">Clear ↺</button><button type="button" id="saveCanvas">Save drawing ↓</button></div></div></aside>
+  </div>
 </section>
 <section class="about" id="about" aria-labelledby="aboutTitle">
- <div class="section-index reveal">03 / ABOUT THIS HUMAN</div>
- <div class="about-content">
-  <div class="reveal"><h2 id="aboutTitle">MORE THAN<br><em>JUST</em><br>PIXELS.</h2>
-   <div class="about-orbit" aria-hidden="true"><span class="about-main">K.</span><span class="orbit-chip">CURIOUS BY DEFAULT</span><span class="orbit-chip two">DESIGN + EVERYTHING ELSE ✳</span></div>
+  <div class="section-index reveal">03 <span class="rule"></span> A little about me</div>
+  <div class="about-content">
+    <div class="about-text reveal"><h2 id="aboutTitle">A curious mind,<br><em>an eye for detail.</em></h2><p class="large">Hi again. I'm Kanmash — a product designer who enjoys turning complicated problems into experiences that feel intuitive and a bit more human.</p><p>I'm interested in product thinking, visual design, meaningful interactions, and how small decisions change the way people experience digital products.</p><p>This site is a tiny expression of that curiosity. Feel free to move things around while you're here.</p><div class="skill-chips"><span>Product design</span><span>UI / UX</span><span>Interaction</span><span>Prototyping</span></div><button type="button" class="thought-btn" id="swapThought"><span id="thought">I LIKE MAKING COMPLEX THINGS FEEL SIMPLE.</span> <span aria-hidden="true">↻</span></button></div>
+    <div class="about-object reveal" aria-hidden="true"><div class="about-grid"></div><span class="about-disc">k<span>.</span></span><div class="about-label">DESIGNER<br>& CURIOUS<br>HUMAN <span>✳</span></div><div class="about-quote">small details,<br>big feelings.</div></div>
   </div>
-  <div class="about-copy reveal">
-   <p class="large">HELLO AGAIN! I'M KANMASH. I CARE ABOUT WHAT PEOPLE FEEL WHEN THEY USE THE THINGS WE MAKE.</p>
-   <p>I'm a product designer based in India, working across interface design, product thinking and creative experiments. I like small details, unusual ideas, and making the complicated feel less complicated.</p>
-   <p>This website is one of those experiments: a little messy, a little curious, and intentionally not another standard project grid.</p>
-   <div class="skill-chips"><span>PRODUCT DESIGN</span><span>UI / UX</span><span>INTERACTION</span><span>PROTOTYPING</span><span>EXPERIMENTS</span></div>
-   <button type="button" class="plain-btn" id="swapThought" aria-label="Cycle through design thoughts">✳ <span id="thought">I LIKE MAKING COMPLEX THINGS FEEL SIMPLE.</span> ↻</button>
-  </div>
- </div>
- <div class="about-footer reveal"><div><span>01 / CURRENTLY INTO</span><b>Interfaces with personality</b></div><div><span>02 / WHERE I'M FROM</span><b>India</b></div><div><span>03 / FULL PORTFOLIO</span><b><a href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-underline-offset:5px">Explore my 2025 work ↗</a></b></div></div>
+  <div class="about-footer reveal"><div><span>01 / WHAT I DO</span><b>Product & UI/UX design</b></div><div><span>02 / WHERE</span><b>India</b></div><div><span>03 / KEEP IN TOUCH</span><b><a href="mailto:pkanmash@gmail.com">pkanmash@gmail.com ↗</a></b></div></div>
 </section>
 <section class="contact" id="contact" aria-labelledby="contactTitle">
- <div class="section-index reveal">04 / ONE MORE TAB?</div>
- <h2 id="contactTitle" class="reveal"><span>LET'S MAKE</span><span class="line-two"><span class="outline">SOMETHING</span></span><span>HAPPEN.</span></h2>
- <div class="contact-intro reveal"><p>Need someone who thinks about the tiny details and the big picture? I'd love to hear what you're making.</p><a class="contact-cta" href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer">FIND ME ON BEHANCE <span aria-hidden="true">↗</span></a></div>
- <footer class="contact-footer"><span>© 2026 KANMASH ® / MADE WITH TOO MANY OPEN TABS.</span><span>FREE TO EXPLORE. BUILT WITH CURIOSITY.</span><a href="#top">BACK TO THE TOP ↑</a></footer>
+  <div class="section-index reveal">04 <span class="rule"></span> Let's connect</div>
+  <div class="contact-content reveal">
+    <div><h2 id="contactTitle">Have something<br><em>in mind?</em></h2><p>A project, a question, an interesting idea — you can always reach me here.</p></div>
+    <div class="contact-link-box"><span>Here's my email :</span><a class="contact-email" href="mailto:pkanmash@gmail.com">pkanmash@gmail.com <span aria-hidden="true">↗</span></a><span class="contact-note">GO AHEAD, SAY HELLO.</span></div>
+  </div>
+  <footer class="contact-footer"><span>© 2026 KANMASH</span><span>BUILT WITH CURIOSITY AND A LITTLE TOO MUCH COFFEE.</span><a href="#top">BACK TO TOP ↑</a></footer>
 </section>
 </main>
 <dialog id="caseDialog" aria-labelledby="caseTitle">
- <div class="case-header"><span id="caseLabel">PROJECT / 001</span><span>CASE STUDY PREVIEW — SEE ORIGINAL ON BEHANCE</span><button type="button" class="case-close" id="caseClose" aria-label="Close project dialog">×</button></div>
- <div class="case-content"><div class="section-index">A TAB WORTH OPENING</div><h3 id="caseTitle"></h3><div class="case-art" id="caseArt"></div>
- <div class="case-columns"><div><small>THE IDEA</small><p id="caseLead"></p></div><div><small>WHAT IT EXPLORES</small><p id="caseAngle"></p><p id="caseNote"></p><a class="primary-btn" id="caseLink" href="#" target="_blank" rel="noopener noreferrer">VIEW REAL CASE STUDY <span aria-hidden="true">↗</span></a></div></div>
- <p class="case-disclaimer">Portfolio preview visuals are original illustrative mockups created for this website, not screenshots from the Behance projects. Case-study details and design work are on the linked original project page.</p>
- </div>
+ <div class="case-header"><span id="caseLabel">PROJECT / 001</span><span>CASE STUDY PREVIEW</span><button class="case-close" id="caseClose" type="button" aria-label="Close case study">×</button></div>
+ <div class="case-content"><span class="section-index">A little closer</span><h3 id="caseTitle"></h3><div class="case-art" id="caseArt"></div><div class="case-columns"><div><small>THE IDEA</small><p id="caseLead"></p></div><div><small>WHAT IT EXPLORES</small><p id="caseAngle"></p><p id="caseNote"></p><a class="primary-btn" id="caseLink" href="#" target="_blank" rel="noopener noreferrer">See the full case study ↗</a></div></div><p class="case-disclaimer">The illustrations here are custom previews for this website. The original project visuals and complete case studies are linked on Behance.</p></div>
 </dialog>
 </body>
 </html>
