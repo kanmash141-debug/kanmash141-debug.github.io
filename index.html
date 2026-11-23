@@ -13,8 +13,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="./style.css?v=5">
 <link rel="stylesheet" href="./theme.css?v=3">
+<link rel="stylesheet" href="./featured.css?v=1">
 <script defer src="./script.js?v=3"></script>
 <script defer src="./motion.js?v=1"></script>
+<script defer src="./featured.js?v=1"></script>
 </head>
 <body>
 <a class="skip-link" href="#work">Skip to selected work</a>
@@ -27,7 +29,7 @@
   <div class="topbar-center">PRODUCT DESIGNER <span class="nav-divider">/</span> INDIA <span class="status-dot" aria-label="Available to connect"></span></div>
   <nav class="topnav" aria-label="Main navigation">
     <a href="#motion-reel">Motion</a>
-    <a href="#work">Work</a>
+    <a href="#work">Featured</a>
     <a href="#playground">Playground</a>
     <a href="#about">About</a>
     <button type="button" class="motion-btn" id="motionSwitch" aria-label="Toggle site animation" aria-pressed="true"><b aria-hidden="true"></b>MOTION ON</button>
@@ -95,36 +97,86 @@
  </div>
  <div class="reel-below"><span>ORIGINAL INTERFACE MOTION STUDIES — NOT FOOTAGE FROM THE CASE STUDIES</span><span>PLAY, PAUSE OR SCRUB THE REEL ↗</span></div>
 </section>
-<section class="work" id="work" aria-labelledby="workTitle">
-  <div class="section-index reveal">01 <span class="rule"></span> Selected work</div>
-  <div class="work-intro reveal"><div><h2 id="workTitle">A selection of<br><em>things I've made.</em></h2></div><p>A few ideas that started with a question and ended up becoming something you can see, click, and explore.</p></div>
-  <div class="projects">
-    <article class="project project--gpay reveal">
-      <div class="project-text"><div class="project-meta">01 / PRODUCT DESIGN <span>2026</span></div><h3>What if Google Pay managed all our subscriptions?</h3><p>An exploration of a simpler way to see, understand, and manage recurring payments inside an everyday app.</p><button type="button" class="project-cta" data-open-project="gpay">Explore project <span aria-hidden="true">↗</span></button><div class="project-sub">FINTECH <span>—</span> UI/UX CONCEPT</div></div>
-      <button type="button" class="project-art project-art--gpay" data-open-project="gpay" data-cursor="VIEW ↗" aria-label="Open Google Pay case study">
-        <div class="backwords" aria-hidden="true">Simpler.</div><div class="art-badge">CONCEPT<br>01</div>
-        <div class="art-card">
-          <div class="gpay-screen">
-            <div class="gpay-head">GPay / Reimagined <span>SUBSCRIPTIONS</span></div><div class="gpay-bg-label" aria-hidden="true">MANAGE EVERY PLAN</div><div class="gpay-floating">Stay on top<br>of it all.<span>Less switching, more clarity.</span></div>
-            <div class="gpay-phone" aria-hidden="true"><div class="phone-heading">Subscriptions <span class="phone-circle"></span></div><div class="spend-amount">₹1,499</div><div class="spend-label">MONTHLY TOTAL / EXAMPLE</div><div class="meter"><i></i></div><div class="sub"><span class="subicon">♫</span> Music <b>₹119</b></div><div class="sub"><span class="subicon">▶</span> Video <b>₹649</b></div><div class="sub"><span class="subicon">☁</span> Cloud <b>₹130</b></div></div>
-          </div>
-        </div>
-        <span class="art-bottom">Tap to explore project ↗</span>
-      </button>
-    </article>
-    <article class="project project--zoom reveal">
-      <div class="project-text"><div class="project-meta">02 / PRODUCT DESIGN <span>2026</span></div><h3>Zoom AI — rethinking the virtual meeting.</h3><p>Exploring how intelligent assistance might help people collaborate more naturally, with less friction.</p><button type="button" class="project-cta" data-open-project="zoom">Explore project <span aria-hidden="true">↗</span></button><div class="project-sub">AI & COLLABORATION <span>—</span> UI/UX CONCEPT</div></div>
-      <button type="button" class="project-art project-art--zoom" data-open-project="zoom" data-cursor="VIEW ↗" aria-label="Open Zoom AI case study">
-        <div class="backwords" aria-hidden="true">Together.</div><div class="art-badge">CONCEPT<br>02</div>
-        <div class="art-card">
-          <div class="zoom-screen"><div class="zoom-shell"><div class="zoom-grid"><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Design</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Research</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">Product</span></div><div class="meeting-tile"><span class="person-head"></span><span class="person-body"></span><span class="name-tag">You</span></div></div><div class="ai-card"><strong>✦ Meeting AI</strong><p>Key points, without the scramble.</p><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><span class="ai-badge">Summary ready</span></div></div><div class="zoom-foot" aria-hidden="true"><span>◉</span><span>♫</span><span>▣</span><span>✧</span><span>↗</span></div></div>
-        </div>
-        <span class="art-bottom">Tap to explore project ↗</span>
-      </button>
-    </article>
-  </div>
-  <a class="work-extra" href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer">See my earlier portfolio work <span aria-hidden="true">↗</span></a>
-</section>
+<section class="work featured-work" id="work" aria-labelledby="workTitle">
+<div class="section-index reveal">02 <span class="rule"></span> FEATURED / THINGS I'VE MADE</div>
+<div class="featured-head reveal"><h2 id="workTitle">A few ideas worth<br><em>flipping over.</em></h2>
+<p class="featured-head__copy">Every project starts with a question. Here's a closer look at some of mine.
+<span class="featured-hand-note">Psst… these cards have two sides ↘</span></p></div>
+<div class="featured-stage" id="featuredStage" aria-label="Interactive suspended work cards">
+<svg class="featured-wire" viewBox="0 0 1200 145" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+<path d="M 18 66 C 205 85, 360 89, 535 80 S 945 74, 1182 46"/><circle cx="18" cy="66" r="2.5"/><circle cx="1182" cy="46" r="2.5"/></svg>
+<div class="featured-grid"><div class="featured-hanger" style="--item-index:0"><div class="featured-rig"><span class="featured-hook" aria-hidden="true"></span><span class="featured-string" aria-hidden="true"></span>
+<article class="featured-card feature-card--gpay" data-side="front" aria-label="Google Pay — flip for more details">
+<div class="featured-card__inner">
+<div class="featured-face featured-face--front">
+<div class="featured-card__eyebrow"><span>PROJECT / 001</span><span aria-hidden="true">✳</span></div>
+<div class="featured-card__visual featured-card__visual--gpay" aria-hidden="true"><div class="featured-ui-phone"><div class="featured-ui-phone__title">Subscriptions</div><div class="featured-ui-phone__amount">₹1,499</div><div class="featured-ui-phone__line"></div><div class="featured-ui-phone__line"></div><div class="featured-ui-phone__line"></div><div class="featured-ui-phone__line"></div></div><span class="featured-floating-pill">Every plan.<br>One place. ↗</span></div>
+<div class="featured-card__meta"><div><h3>Google Pay</h3><p>What if it managed all our subscriptions?</p></div>
+<div class="featured-card__footer"><span>FINTECH / UI·UX</span><button class="featured-flip" type="button" aria-label="Flip Google Pay card for details">↻</button></div></div>
+</div>
+<div class="featured-face featured-face--back" inert>
+<div class="featured-back-top"><span>FOLIO / 001</span><span class="featured-back-symbol" aria-hidden="true">✳</span></div>
+<h3 class="featured-back-title">Every plan.<br>One place.</h3>
+<p class="featured-back-desc">A product-design exploration of simplifying recurring payments inside Google Pay.</p>
+<div class="featured-back-tags"><span>FINTECH</span><span>PRODUCT DESIGN</span></div>
+<div class="featured-back-bottom"><button class="featured-flip" type="button" aria-label="Flip Google Pay card back to front">↶</button>
+<a class="featured-open" href="https://www.behance.net/gallery/248661903/What-if-Google-Pay-managed-all-our-Subscriptions" target="_blank" rel="noopener noreferrer">Case study ↗</a>
+</div></div></div></article></div></div>
+<div class="featured-hanger" style="--item-index:1"><div class="featured-rig"><span class="featured-hook" aria-hidden="true"></span><span class="featured-string" aria-hidden="true"></span>
+<article class="featured-card feature-card--zoom" data-side="front" aria-label="Zoom AI — flip for more details">
+<div class="featured-card__inner">
+<div class="featured-face featured-face--front">
+<div class="featured-card__eyebrow"><span>PROJECT / 002</span><span aria-hidden="true">✦</span></div>
+<div class="featured-card__visual featured-card__visual--zoom" aria-hidden="true"><div class="featured-zoom-frame"><div class="featured-zoom-head"><span>● ● ●</span><span>DESIGN SYNC</span></div><div class="featured-zoom-people"><span>K</span><span>R</span><span>P</span><span>+</span></div></div><span class="featured-ai-pill">✦ AI notes ready</span></div>
+<div class="featured-card__meta"><div><h3>Zoom AI</h3><p>Rethinking the virtual meeting experience.</p></div>
+<div class="featured-card__footer"><span>AI / UI·UX</span><button class="featured-flip" type="button" aria-label="Flip Zoom AI card for details">↻</button></div></div>
+</div>
+<div class="featured-face featured-face--back" inert>
+<div class="featured-back-top"><span>FOLIO / 002</span><span class="featured-back-symbol" aria-hidden="true">✦</span></div>
+<h3 class="featured-back-title">More focus.<br>Less friction.</h3>
+<p class="featured-back-desc">Exploring thoughtful AI assistance for virtual meetings and collaboration.</p>
+<div class="featured-back-tags"><span>AI</span><span>COLLABORATION</span></div>
+<div class="featured-back-bottom"><button class="featured-flip" type="button" aria-label="Flip Zoom AI card back to front">↶</button>
+<a class="featured-open" href="https://www.behance.net/gallery/245805183/Zoom-AI-Virtual-Meeting-App-UI-UX-Product-Design" target="_blank" rel="noopener noreferrer">Case study ↗</a>
+</div></div></div></article></div></div>
+<div class="featured-hanger" style="--item-index:2"><div class="featured-rig"><span class="featured-hook" aria-hidden="true"></span><span class="featured-string" aria-hidden="true"></span>
+<article class="featured-card feature-card--archive" data-side="front" aria-label="Portfolio '25 — flip for more details">
+<div class="featured-card__inner">
+<div class="featured-face featured-face--front">
+<div class="featured-card__eyebrow"><span>THE ARCHIVE / 003</span><span aria-hidden="true">✳</span></div>
+<div class="featured-card__visual featured-card__visual--archive" aria-hidden="true"><span class="featured-archive-star">✳</span><span class="featured-archive-number">25</span><span class="featured-archive-caption">THE YEAR IN PIXELS</span></div>
+<div class="featured-card__meta"><div><h3>Portfolio '25</h3><p>Earlier UI/UX work, ideas and explorations.</p></div>
+<div class="featured-card__footer"><span>DESIGN ARCHIVE</span><button class="featured-flip" type="button" aria-label="Flip Portfolio '25 card for details">↻</button></div></div>
+</div>
+<div class="featured-face featured-face--back" inert>
+<div class="featured-back-top"><span>FOLIO / 003</span><span class="featured-back-symbol" aria-hidden="true">✳</span></div>
+<h3 class="featured-back-title">A little<br>look back.</h3>
+<p class="featured-back-desc">A collection of earlier design explorations and UI/UX projects from 2025.</p>
+<div class="featured-back-tags"><span>PORTFOLIO</span><span>2025</span></div>
+<div class="featured-back-bottom"><button class="featured-flip" type="button" aria-label="Flip Portfolio '25 card back to front">↶</button>
+<a class="featured-open" href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer">Explore ↗</a>
+</div></div></div></article></div></div>
+<div class="featured-hanger" style="--item-index:3"><div class="featured-rig"><span class="featured-hook" aria-hidden="true"></span><span class="featured-string" aria-hidden="true"></span>
+<article class="featured-card feature-card--hello" data-side="front" aria-label="Beyond work — flip for more details">
+<div class="featured-card__inner">
+<div class="featured-face featured-face--front">
+<div class="featured-card__eyebrow"><span>A LITTLE ABOUT ME</span><span aria-hidden="true">✷</span></div>
+<div class="featured-card__visual featured-card__visual--me"><img src="./assets/kanmash-about-hd.webp?v=1" alt="Kanmash wearing a green cap at a mountain viewpoint" width="960" height="1280" loading="lazy" decoding="async"><span class="featured-photo-stamp">HELLO, I'M KANMASH ✳</span></div>
+<div class="featured-card__meta"><div><h3>Beyond work</h3><p>The curious person behind these pixels.</p></div>
+<div class="featured-card__footer"><span>DESIGNER / HUMAN</span><button class="featured-flip" type="button" aria-label="Flip Beyond work card for details">↻</button></div></div>
+</div>
+<div class="featured-face featured-face--back" inert>
+<div class="featured-back-top"><span>FOLIO / 004</span><span class="featured-back-symbol" aria-hidden="true">✷</span></div>
+<h3 class="featured-back-title">Let's make<br>something.</h3>
+<p class="featured-back-desc">I'm Kanmash, a product designer who loves thoughtful ideas and playful details.</p>
+<div class="featured-back-tags"><span>PRODUCT</span><span>INTERACTION</span></div>
+<div class="featured-back-bottom"><button class="featured-flip" type="button" aria-label="Flip Beyond work card back to front">↶</button>
+<a class="featured-open" href="mailto:pkanmash@gmail.com" >Email me ↗</a>
+</div></div></div></article></div></div></div></div>
+<div class="featured-stage-foot"><span><strong>✳ HOVER TO SWAY</strong> &nbsp; • &nbsp; CLICK / TAP TO FLIP</span>
+<span>2 CASE STUDIES &nbsp; / &nbsp; 1 ARCHIVE &nbsp; / &nbsp; 1 HELLO</span>
+<a class="featured-inline-link" href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer">Earlier work ↗</a>
+</div></section>
 <section class="process" id="approach" aria-labelledby="processTitle"><div class="section-index reveal">03 <span class="rule"></span> How I think</div>
  <div class="process-header reveal"><h2 id="processTitle">Curious first.<br><em>Intentional always.</em></h2><p>Designing something that feels effortless takes a surprising amount of thought.</p></div>
  <div class="process-grid">
