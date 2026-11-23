@@ -72,33 +72,35 @@
   padding:0 clamp(4px,2vw,25px);
   min-height:545px;
 }
+/* The rig owns a single, uninterrupted compositor-friendly pendulum.
+   Hover feedback acts on the nested card, so the swing never restarts. */
 .featured-hanger{
   height:525px;
   position:relative;
   min-width:0;
   --hang-offset:72px;
-  --sway-start:-2deg;
-  --sway-end:2deg;
+  --sway-start:-1.15deg;
+  --sway-end:1.15deg;
 }
-.featured-hanger:nth-child(1){--hang-offset:64px;--sway-start:-2.5deg;--sway-end:1.6deg;}
-.featured-hanger:nth-child(2){--hang-offset:84px;--sway-start:2.2deg;--sway-end:-1.8deg;}
-.featured-hanger:nth-child(3){--hang-offset:69px;--sway-start:-1.2deg;--sway-end:2.5deg;}
-.featured-hanger:nth-child(4){--hang-offset:78px;--sway-start:1.8deg;--sway-end:-2.1deg;}
+.featured-hanger:nth-child(1){--hang-offset:64px;--sway-start:-1.1deg;--sway-end:.95deg;}
+.featured-hanger:nth-child(2){--hang-offset:84px;--sway-start:1.2deg;--sway-end:-.95deg;}
+.featured-hanger:nth-child(3){--hang-offset:69px;--sway-start:-.85deg;--sway-end:1.25deg;}
+.featured-hanger:nth-child(4){--hang-offset:78px;--sway-start:1deg;--sway-end:-1.2deg;}
 .featured-rig{
   width:min(100%,258px);
-  position:relative;top:var(--hang-offset);margin:0 auto;
+  position:relative;
+  top:var(--hang-offset);
+  margin:0 auto;
   transform-origin:50% 0;
-  animation:featured-sway 7.5s ease-in-out infinite alternate;
-  animation-delay:calc(var(--item-index,0) * -1.38s);
+  transform:rotate(var(--sway-start));
+  animation:featured-sway 10.5s cubic-bezier(.45,0,.55,1) infinite alternate;
+  animation-delay:calc(var(--item-index,0) * -1.65s);
   will-change:transform;
+  backface-visibility:hidden;
 }
-.featured-hanger:nth-child(2) .featured-rig{animation-duration:8.8s;}
-.featured-hanger:nth-child(3) .featured-rig{animation-duration:7.1s;}
-.featured-hanger:nth-child(4) .featured-rig{animation-duration:9.2s;}
-.featured-hanger:hover .featured-rig,
-.featured-hanger:focus-within .featured-rig{
-  animation:featured-jostle 1.25s cubic-bezier(.22,1,.36,1) both;
-}
+.featured-hanger:nth-child(2) .featured-rig{animation-duration:11.8s;}
+.featured-hanger:nth-child(3) .featured-rig{animation-duration:10.1s;}
+.featured-hanger:nth-child(4) .featured-rig{animation-duration:12.1s;}
 .featured-hook{
   position:relative;display:block;width:22px;height:15px;margin:0 auto;
 }
@@ -117,6 +119,8 @@
   height:29px;width:1.5px;
   background:#23003FC0;
 }
+/* Hover gently lifts the card on a different element/layer than the swing.
+   Avoid animating CSS filter on a constantly moving 3D element. */
 .featured-card{
   width:100%;
   aspect-ratio:0.72;
@@ -126,11 +130,15 @@
   cursor:pointer;
   perspective:1400px;
   position:relative;
-  transform:translateZ(0);
-  filter:drop-shadow(0 16px 19px #23003F22);
-  transition:filter .35s ease;
+  transform:translate3d(0,0,0) rotate(0deg);
+  transform-origin:50% 0;
+  transition:transform .9s cubic-bezier(.22,1,.36,1);
+  backface-visibility:hidden;
 }
-.featured-hanger:hover .featured-card{filter:drop-shadow(0 24px 24px #23003F38);}
+.featured-hanger:hover .featured-card,
+.featured-hanger:focus-within .featured-card{
+  transform:translate3d(0,-4px,0) rotate(.45deg);
+}
 .featured-card::before{
   content:"";position:absolute;z-index:5;top:-5px;left:50%;
   transform:translateX(-50%);
@@ -141,17 +149,21 @@
   border-radius:1px 1px 4px 4px;
   pointer-events:none;
 }
+/* Zero-overshoot flip: no sudden acceleration near the backface switch. */
 .featured-card__inner{
   position:absolute;inset:0;
   transform-style:preserve-3d;
-  transform:rotateY(0);
-  transition:transform .95s cubic-bezier(.22,.8,.12,1.03);
+  transform:translateZ(0) rotateY(0deg);
+  transition:transform 1.15s cubic-bezier(.22,.76,.18,1);
   will-change:transform;
 }
-.featured-card.is-flipped .featured-card__inner{transform:rotateY(180deg);}
+.featured-card.is-flipped .featured-card__inner{
+  transform:translateZ(0) rotateY(180deg);
+}
 .featured-face{
   position:absolute;inset:0;
   backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  transform:translateZ(.5px);
   border:1px solid #23003F55;
   border-radius:12px;
   box-shadow:0 5px 0 #23003F1A,inset 0 0 0 1px #ffffffC0;
@@ -162,7 +174,7 @@
 }
 .featured-face--front{padding:13px 13px 12px;}
 .featured-face--back{
-  transform:rotateY(180deg);
+  transform:rotateY(180deg) translateZ(.5px);
   padding:19px 17px 17px;
   background:
     radial-gradient(circle at 10% 10%,#FFFDB4D8 0,transparent 35%),
@@ -381,16 +393,10 @@
 .motion-off .featured-rig,
 .motion-off .featured-archive-star {animation:none!important;}
 .motion-off .featured-card__inner {transition:none!important;}
+.motion-off .featured-card{transform:none!important;}
 @keyframes featured-sway{
   from{transform:rotate(var(--sway-start));}
   to{transform:rotate(var(--sway-end));}
-}
-@keyframes featured-jostle{
-  0%{transform:rotate(0deg)}
-  25%{transform:rotate(6deg)}
-  54%{transform:rotate(-4deg)}
-  78%{transform:rotate(1.5deg)}
-  100%{transform:rotate(0deg)}
 }
 @keyframes featured-rotate{to{transform:rotate(360deg)}}
 @media (max-width:1120px){
@@ -464,4 +470,6 @@
  .featured-rig,.featured-archive-star{animation:none!important;}
  .featured-card__inner{transition:none!important;}
  .featured-hanger:hover .featured-rig{animation:none!important;}
+ .featured-card__inner,.featured-card{transition:none!important;}
+ .featured-card:hover,.featured-hanger:focus-within .featured-card{transform:none!important;}
 }
