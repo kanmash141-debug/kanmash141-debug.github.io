@@ -178,7 +178,7 @@
   const canvas=$("#scratchCanvas");
   if(canvas){
     const ctx=canvas.getContext("2d",{alpha:true});
-    let ink="#141514",painting=false,last=null;
+    let ink="#23003F",painting=false,last=null;
     function sizeCanvas(){
       const old=document.createElement("canvas");
       old.width=canvas.width;old.height=canvas.height;
@@ -224,7 +224,7 @@
       const output=document.createElement("canvas");
       output.width=canvas.width;output.height=canvas.height;
       const paint=output.getContext("2d");
-      paint.fillStyle="#f1eedc";paint.fillRect(0,0,output.width,output.height);
+      paint.fillStyle="#FFFDB4";paint.fillRect(0,0,output.width,output.height);
       paint.drawImage(canvas,0,0);
       const a=document.createElement("a");a.href=output.toDataURL("image/png");
       a.download="kanmash-scratchpad.png";document.body.appendChild(a);a.click();a.remove();
