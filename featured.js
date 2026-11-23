@@ -14,6 +14,7 @@
   let demoPlayed = false;
   let demoTimer = null;
   let returnTimer = null;
+  const flipMs = 1150; // Matches the CSS flip duration.
 
   const motionAllowed = () => !reduce && !document.body.classList.contains("motion-off");
   function cancelDemo() {
@@ -33,8 +34,12 @@
     card.setAttribute("data-side",on?"back":"front");
     const visibleButton = (on?back:front).querySelector(".featured-flip");
     if (focus && visibleButton) {
-      // Focus only an actually visible face; waits for inert to take effect.
-      requestAnimationFrame(() => visibleButton.focus({preventScroll:true}));
+      // Keyboard focus transfers after the rotated side comes into view,
+      // avoiding focus-induced visual jumps at the beginning of a flip.
+      window.setTimeout(() => {
+        if (!card.isConnected || card.classList.contains("is-flipped") !== on) return;
+        visibleButton.focus({preventScroll:true});
+      },Math.round(flipMs*.56));
     }
   }
   for (const card of cards) {
@@ -51,7 +56,7 @@
       if (event.target.closest("button:not(.featured-flip)")) return;
       cancelDemo();
       const on = !card.classList.contains("is-flipped");
-      flip(card,on,Boolean(event.target.closest(".featured-flip")));
+      flip(card,on,event.detail === 0 && Boolean(event.target.closest(".featured-flip")));
     });
     card.addEventListener("keydown",event => {
       if (event.key === "Escape" && card.classList.contains("is-flipped")) {
@@ -60,7 +65,11 @@
         flip(card,false,true);
       }
     });
-    card.addEventListener("pointerenter",()=>card.closest(".featured-hanger")?.classList.add("is-engaged"));
+    card.addEventListener("pointerenter",()=>{
+      // Never interrupt someone's exploration with an auto demo flip.
+      cancelDemo();
+      card.closest(".featured-hanger")?.classList.add("is-engaged");
+    });
     card.addEventListener("pointerleave",()=>card.closest(".featured-hanger")?.classList.remove("is-engaged"));
   }
 
@@ -79,7 +88,7 @@
         flip(card,true,false);
         returnTimer=setTimeout(() => {
           if (!touched && card.isConnected) flip(card,false,false);
-        },2100);
+        },2800);
       },1450);
     },{threshold:.33});
     io.observe(stage);
