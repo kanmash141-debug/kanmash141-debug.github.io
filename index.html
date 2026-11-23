@@ -11,8 +11,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%231b1b1a'/%3E%3Ctext x='13' y='46' fill='%23edece4' font-size='44' font-family='Arial,sans-serif' font-weight='bold'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="./style.css?v=4">
-<script defer src="./script.js?v=2"></script>
+<link rel="stylesheet" href="./style.css?v=5">
+<script defer src="./script.js?v=3"></script>
 </head>
 <body>
 <a class="skip-link" href="#work">Skip to selected work</a>
@@ -24,6 +24,7 @@
   <a class="wordmark" href="#top" aria-label="Kanmash — back to top"><span class="brand-symbol">k.</span><span>kanmash<span class="wordmark-dot">®</span></span></a>
   <div class="topbar-center">PRODUCT DESIGNER <span class="nav-divider">/</span> INDIA <span class="status-dot" aria-label="Available to connect"></span></div>
   <nav class="topnav" aria-label="Main navigation">
+    <a href="#motion-reel">Motion</a>
     <a href="#work">Work</a>
     <a href="#playground">Playground</a>
     <a href="#about">About</a>
@@ -34,14 +35,16 @@
 <main>
 <section class="hero" id="top" aria-labelledby="heroTitle">
   <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-motion-pattern" aria-hidden="true"><span>DESIGN ✳ PEOPLE ✳ PLAY ✳</span><span>DESIGN ✳ PEOPLE ✳ PLAY ✳</span></div>
+  <div class="hero-float hero-float--a" aria-hidden="true">✦</div><div class="hero-float hero-float--b" aria-hidden="true">✴</div>
   <div class="hero-topline"><span>INDEPENDENT THOUGHTS & DESIGN EXPERIMENTS</span><span>PORTFOLIO / 2026</span></div>
   <div class="hero-body">
     <div class="hero-words reveal">
       <div class="supra"><span class="hi-mark" aria-hidden="true">✳</span> Hello, glad you're here.</div>
-      <h1 id="heroTitle">I'm <em>Kanmash.</em><br><span>Designer of</span><br><span class="last">little things <span class="hero-asterisk" aria-hidden="true">✳</span></span></h1>
+      <h1 id="heroTitle" class="kinetic-title"><span class="kinetic-line"><span>I'm <em>Kanmash.</em></span></span><span class="kinetic-line"><span>Designer of</span></span><span class="kinetic-line"><span>little things <span class="hero-asterisk" aria-hidden="true">✳</span></span></span></h1>
       <p class="subcopy">I design digital experiences that feel simple, thoughtful, and sometimes a little unexpected. I enjoy the space where <strong>product thinking meets visual play.</strong></p>
       <div class="hero-actions"><a class="primary-btn" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a href="#about" class="plain-btn">A little about me <span aria-hidden="true">↘</span></a></div>
-      <div class="hero-aside"><span>01 — TWO IDEAS I'VE BEEN WORKING ON</span><span>↓ KEEP SCROLLING</span></div>
+      <div class="hero-aside"><span>01 — TWO IDEAS I'VE BEEN WORKING ON</span><span>↓ KEEP SCROLLING</span></div><div class="hero-timeline" aria-hidden="true"><span>01 / INTRO</span><div><i></i></div><span>04 / LET’S TALK</span></div>
     </div>
     <div class="hero-desk" aria-label="Draggable interactive project previews">
       <div class="desk-orbit" aria-hidden="true"></div>
@@ -76,6 +79,20 @@
   </div>
   <div class="hero-footer"><span><span class="availability" aria-hidden="true"></span> CURRENTLY MAKING THINGS</span><span>NEW DELHI, INDIA / <span id="clock">IST</span></span><a href="#work">SCROLL TO DISCOVER ↓</a></div>
 </section>
+<section class="motion-reel" id="motion-reel" aria-labelledby="reelTitle">
+ <div class="reel-heading reveal"><div class="section-index">01 <span class="rule"></span> A reel of moving ideas</div><div class="reel-heading-grid"><h2 id="reelTitle" data-text-reveal>Thinking in<br><em>motion.</em><span aria-hidden="true"> ↗</span></h2><p>Interfaces are more than static screens. Here are a few small motion experiments that explore how they could feel.</p></div></div>
+ <div class="reel-shell reveal" id="reelShell" aria-label="Interactive four-scene motion reel">
+  <div class="reel-bar"><div class="reel-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>STUDIES_IN_MOTION / KANMASH.DESIGN</span><span class="reel-count" id="reelCount" aria-live="off">01 / 04</span></div>
+  <div class="reel-stage" id="reelStage">
+   <div class="reel-scene reel-scene--intro is-active" data-reel-scene="0" aria-hidden="false"><div class="reel-ambient reel-ambient--one"></div><div class="reel-scribble" aria-hidden="true">✳</div><span class="reel-overline">MOTION STUDY NO. 001</span><h3>Good ideas<br>don't <em>sit still.</em></h3><div class="reel-particle-field" aria-hidden="true"><i>✺</i><i>✦</i><i>✳</i><i>✴</i><i>+</i></div><div class="reel-subscript">A LITTLE EXPERIMENT IN PRODUCT MOTION</div></div>
+   <div class="reel-scene reel-scene--gpay" data-reel-scene="1" aria-hidden="true"><div class="reel-ambient reel-ambient--two"></div><div class="reel-project-label"><span>01 / SUBSCRIPTIONS</span><b>GOOGLE PAY</b></div><div class="reel-gpay-phone"><div class="reel-notch"></div><div class="reel-ui-title">Your subscriptions <span>●</span></div><div class="reel-ui-eyebrow">MONTHLY OVERVIEW</div><div class="reel-ui-amount"><span>₹</span><span class="reel-animated-number">1,499</span></div><div class="reel-ui-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="reel-ui-item"><i>♫</i><span>Music</span><b>₹119</b></div><div class="reel-ui-item"><i>▶</i><span>Streaming</span><b>₹649</b></div><div class="reel-ui-item"><i>☁</i><span>Cloud</span><b>₹130</b></div></div><div class="reel-floating-note">Every plan.<br>One clear place. <span>↗</span></div><div class="reel-project-footer">EXPLORING THE IDEA OF CONTROL WITHOUT COMPLEXITY</div></div>
+   <div class="reel-scene reel-scene--zoom" data-reel-scene="2" aria-hidden="true"><div class="reel-ambient reel-ambient--three"></div><div class="reel-project-label"><span>02 / COLLABORATION</span><b>ZOOM AI</b></div><div class="reel-zoom-panel"><div class="reel-zoom-head"><span>● ● ●</span><b>Weekly design sync</b><small>LIVE</small></div><div class="reel-meet-row"><span class="reel-avatar">K</span><span class="reel-avatar">D</span><span class="reel-avatar">S</span><span class="reel-avatar">+</span></div><div class="reel-ai-output"><span>✦ AI MEETING NOTES</span><b>Making collaboration clearer.</b><i></i><i></i><i></i><div class="reel-ai-chip">3 ACTION ITEMS IDENTIFIED</div></div></div><div class="reel-floating-star" aria-hidden="true">✷</div><div class="reel-project-footer">EXPLORING THE SPACE BETWEEN PEOPLE + AI</div></div>
+   <div class="reel-scene reel-scene--outro" data-reel-scene="3" aria-hidden="true"><div class="reel-ambient reel-ambient--four"></div><div class="reel-orbit" aria-hidden="true"><span>✳</span><span>✦</span><span>◈</span></div><span class="reel-overline">END OF REEL / START OF AN IDEA</span><h3>Less noise.<br><em>More feeling.</em></h3><a href="#work" class="reel-outro-link">VIEW SELECTED WORK <span>↗</span></a></div>
+  </div>
+  <div class="reel-controls"><div class="reel-transport"><button type="button" id="reelPrev" aria-label="Previous scene">←</button><button type="button" id="reelPlay" aria-label="Pause reel" aria-pressed="true">Ⅱ <span>Pause</span></button><button type="button" id="reelNext" aria-label="Next scene">→</button></div><div class="reel-scrub-wrap"><label class="visually-hidden" for="reelScrub">Choose position in motion reel</label><input id="reelScrub" type="range" min="0" max="100" value="0" step="1" aria-label="Motion reel timeline"><span>00:00 / 00:16</span></div></div>
+ </div>
+ <div class="reel-below"><span>ORIGINAL INTERFACE MOTION STUDIES — NOT FOOTAGE FROM THE CASE STUDIES</span><span>PLAY, PAUSE OR SCRUB THE REEL ↗</span></div>
+</section>
 <section class="work" id="work" aria-labelledby="workTitle">
   <div class="section-index reveal">01 <span class="rule"></span> Selected work</div>
   <div class="work-intro reveal"><div><h2 id="workTitle">A selection of<br><em>things I've made.</em></h2></div><p>A few ideas that started with a question and ended up becoming something you can see, click, and explore.</p></div>
@@ -106,6 +123,14 @@
   </div>
   <a class="work-extra" href="https://www.behance.net/gallery/227956453/Kanmash-Portfolio-UIUX-2025" target="_blank" rel="noopener noreferrer">See my earlier portfolio work <span aria-hidden="true">↗</span></a>
 </section>
+<section class="process" id="approach" aria-labelledby="processTitle"><div class="section-index reveal">03 <span class="rule"></span> How I think</div>
+ <div class="process-header reveal"><h2 id="processTitle">Curious first.<br><em>Intentional always.</em></h2><p>Designing something that feels effortless takes a surprising amount of thought.</p></div>
+ <div class="process-grid">
+  <article class="process-card reveal"><div class="process-icon process-icon--observe" aria-hidden="true"><span>◉</span><i></i><i></i></div><span class="process-number">01 / NOTICE</span><h3>Look closer.</h3><p>Understand what people need, where things feel difficult, and what questions matter.</p></article>
+  <article class="process-card reveal"><div class="process-icon process-icon--explore" aria-hidden="true"><i></i><i></i><i></i><span>✳</span></div><span class="process-number">02 / EXPLORE</span><h3>Try things.</h3><p>Explore different directions, make prototypes, and learn from what changes.</p></article>
+  <article class="process-card reveal"><div class="process-icon process-icon--refine" aria-hidden="true"><span>↗</span><i></i></div><span class="process-number">03 / REFINE</span><h3>Make it feel right.</h3><p>Shape the small moments, transitions and details into something cohesive.</p></article>
+ </div><div class="process-footnote reveal"><span>THOUGHTFUL DESIGN IS A MOVING PROCESS.</span><a href="#playground">TAKE A DETOUR INTO MY PLAYGROUND ↗</a></div></section>
+<div class="motion-ribbon" aria-hidden="true"><div class="motion-ribbon__track"><span>OBSERVE ✳ EXPLORE ✳ BUILD ✳ REFINE ✳</span><span>OBSERVE ✳ EXPLORE ✳ BUILD ✳ REFINE ✳</span><span>OBSERVE ✳ EXPLORE ✳ BUILD ✳ REFINE ✳</span><span>OBSERVE ✳ EXPLORE ✳ BUILD ✳ REFINE ✳</span></div></div>
 <section class="playground" id="playground" aria-labelledby="labTitle">
   <div class="section-index reveal">02 <span class="rule"></span> A little side quest</div>
   <div class="playground-heading reveal"><h2 id="labTitle">Sometimes, I just<br><em>like to play.</em></h2><p>A mini canvas tucked into the portfolio. Scribble, sketch, or make something completely pointless. It's yours.</p></div>
@@ -123,6 +148,7 @@
   <div class="about-footer reveal"><div><span>01 / WHAT I DO</span><b>Product & UI/UX design</b></div><div><span>02 / WHERE</span><b>India</b></div><div><span>03 / KEEP IN TOUCH</span><b><a href="mailto:pkanmash@gmail.com">pkanmash@gmail.com ↗</a></b></div></div>
 </section>
 <section class="contact" id="contact" aria-labelledby="contactTitle">
+  <div class="contact-marquee" aria-hidden="true"><div><span>LET'S MAKE SOMETHING ✳</span><span>LET'S MAKE SOMETHING ✳</span><span>LET'S MAKE SOMETHING ✳</span></div></div>
   <div class="section-index reveal">04 <span class="rule"></span> Let's connect</div>
   <div class="contact-content reveal">
     <div><h2 id="contactTitle">Have something<br><em>in mind?</em></h2><p>A project, a question, an interesting idea — you can always reach me here.</p></div>
