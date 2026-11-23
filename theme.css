@@ -1,0 +1,294 @@
+/*
+  KANMASH / POSTER-POP PALETTE — 2026
+  Four source colours from the approved reference:
+  Indigo #23003F, Vermilion #F94500, Lavender #BCACCE, Lemon #FFFDB4.
+  Loaded after style.css; preserves layout, draggable windows and motion logic.
+*/
+
+:root {
+  --ink:#23003F;
+  --black:#23003F;
+  --paper:#FFFDB4;
+  --paper2:#BCACCE;
+  --white:#FFFDB4;
+  --muted:#BCACCE;
+  --violet:#BCACCE;
+  --sage:#FFFDB4;
+  --coral:#F94500;
+  --border:#23003F30;
+  --indigo:#23003F;
+  --orange:#F94500;
+  --lilac:#BCACCE;
+  --lemon:#FFFDB4;
+}
+html,body {background:var(--lemon);color:var(--indigo);}
+::selection {background:var(--orange);color:var(--lemon);}
+:focus-visible {outline-color:var(--orange);}
+.progress {background:var(--orange);}
+.loader {background:var(--indigo);color:var(--lemon);}
+.loader-inner {border-bottom-color:var(--lilac);}
+.loader-inner>span:first-child {color:var(--orange);}
+.custom-cursor {background:var(--orange);color:var(--indigo);border-color:var(--indigo);}
+
+/* NAV / dark indigo anchor throughout the page */
+.topbar {
+  background:#23003FF5;
+  color:var(--lemon);
+  border-bottom:1px solid #BCACCE50;
+}
+.wordmark,.topbar-center,.topnav a:not(.nav-pill) {color:var(--lemon);}
+.wordmark-dot,.nav-divider {color:var(--lilac);}
+.brand-symbol {background:var(--lilac);color:var(--indigo);border-color:var(--lilac);}
+.status-dot,.availability {background:var(--orange);box-shadow:0 0 0 3px #F9450028;}
+.nav-pill {background:var(--orange);color:var(--indigo);}
+.nav-pill:hover {background:var(--lemon);color:var(--indigo);}
+.motion-btn {color:var(--lemon);border-color:#BCACCE70;background:#BCACCE10;}
+.motion-btn b {background:var(--lilac);}
+.motion-btn b:after {background:var(--orange);}
+
+/* HERO / full-bleed indigo and typography with poster accents */
+.hero {background:var(--indigo);color:var(--lemon);}
+.hero-grid {
+  opacity:.62;
+  background-image:
+    linear-gradient(to right,#BCACCE16 1px,transparent 1px),
+    linear-gradient(to bottom,#BCACCE16 1px,transparent 1px);
+}
+.hero-topline,.hero-footer {color:var(--lilac);}
+.hero-footer {border-top-color:#BCACCE65;}
+.hero-footer a,.hero-footer strong {color:var(--lemon);}
+.hero h1,.hero h1>span,.hero h1 .last,.kinetic-title .kinetic-line>span {color:var(--lemon);}
+.hero h1 em {color:var(--lilac);}
+.hero .supra {color:var(--lemon);}
+.hero .hi-mark,.hero-asterisk,.hero .hero-asterisk {color:var(--orange);}
+.hero .subcopy {color:var(--lilac);}
+.hero .subcopy strong {color:var(--lemon);}
+.hero .plain-btn,.hero .plain-btn span {color:var(--lemon);border-color:var(--lilac);}
+.primary-btn {background:var(--orange);color:var(--indigo);}
+.primary-btn:hover {background:var(--lilac);color:var(--indigo);}
+.hero-aside,.hero-timeline {color:var(--lilac);border-color:#BCACCE67;}
+.hero-timeline>div {background:#BCACCE44;}
+.hero-timeline>div i {background:var(--orange);}
+.hero-motion-pattern span {color:var(--lilac);}
+.hero-float,.hero-asterisk,.desk-stamp {color:var(--orange);}
+.desk-note {color:var(--lemon);}
+.desk-orbit {border-color:#BCACCE75;}
+.desk-orbit:after {border-color:#BCACCE40;}
+.desk-paper {background:var(--lemon);color:var(--indigo);border-color:var(--orange);box-shadow:6px 6px 0 #F945004C;}
+.desk-paper small {color:var(--orange);}
+.window {
+  background:var(--lemon);
+  border:1px solid var(--indigo);
+  box-shadow:0 24px 50px #05000960,8px 10px 0 #F9450099;
+}
+.window:hover {box-shadow:0 30px 58px #05000975,9px 12px 0 #F94500AF;}
+.window-bar {background:var(--lilac);color:var(--indigo);border-bottom-color:var(--indigo);}
+.window-label {color:var(--indigo);}
+.window-controls button {background:var(--indigo);color:var(--lemon);}
+.window-controls button:hover {background:var(--orange);color:var(--indigo);}
+.window-caption {background:var(--lemon);color:var(--indigo);}
+.window-dots i {border-color:var(--indigo);}
+.window-dots i:nth-child(1) {background:var(--orange);}
+.window-dots i:nth-child(2) {background:var(--lemon);}
+.window-dots i:nth-child(3) {background:var(--lilac);}
+
+/* Mockups remain concept illustrations, re-skinned in the four colours */
+.gpay-screen {background:var(--lilac);color:var(--indigo);}
+.gpay-bg-label {color:var(--indigo);opacity:.15;}
+.gpay-floating {color:var(--indigo);}
+.gpay-floating span {color:var(--indigo);opacity:.78;}
+.gpay-phone {border-color:var(--indigo);background:var(--lemon);box-shadow:13px 14px 26px #23003F5E;}
+.gpay-phone:before {background:var(--indigo);}
+.phone-heading,.spend-amount {color:var(--indigo);}
+.phone-circle {background:var(--orange);}
+.spend-label {color:var(--indigo);opacity:.68;}
+.meter {background:#23003F18;}
+.meter i {background:var(--orange);}
+.sub {border-color:#23003F35;color:var(--indigo);}
+.subicon,.sub:nth-of-type(2) .subicon,.sub:nth-of-type(3) .subicon {background:var(--lilac);color:var(--indigo);}
+.zoom-screen {background:var(--indigo);color:var(--lemon);}
+.meeting-tile,.meeting-tile:nth-child(2),.meeting-tile:nth-child(3),.meeting-tile:nth-child(4) {background:linear-gradient(145deg,var(--lilac),#8A6EA0);}
+.meeting-tile:nth-child(2) {background:linear-gradient(145deg,var(--orange),var(--lilac));}
+.meeting-tile:nth-child(3) {background:linear-gradient(145deg,var(--lemon),var(--lilac));}
+.meeting-tile:nth-child(4) {background:linear-gradient(145deg,var(--lilac),var(--orange));}
+.name-tag {background:var(--indigo);color:var(--lemon);}
+.ai-card {background:var(--lemon);color:var(--indigo);}
+.ai-line {background:#23003F25;}
+.ai-badge {background:var(--orange);color:var(--indigo);}
+.zoom-foot span {border-color:var(--lilac);color:var(--lemon);}
+.zoom-foot span:last-child {background:var(--orange);border-color:var(--orange);}
+
+/* REEL / yellow gallery surface, four distinct flat colour scenes */
+.motion-reel {background:var(--lemon);color:var(--indigo);}
+.reel-heading h2,.reel-heading .section-index {color:var(--indigo);}
+.reel-heading h2 em,.reel-heading h2>span {color:var(--orange);}
+.reel-heading-grid p,.reel-below {color:var(--indigo);}
+.reel-shell {
+  background:var(--indigo);
+  border:2px solid var(--indigo);
+  box-shadow:10px 13px 0 var(--orange),0 25px 55px #23003F30;
+}
+.reel-bar {background:var(--indigo);color:var(--lemon);border-bottom-color:#BCACCE66;}
+.reel-dots i {border-color:var(--lilac);}
+.reel-dots i:first-child {background:var(--orange);}
+.reel-dots i:nth-child(2) {background:var(--lemon);}
+.reel-dots i:nth-child(3) {background:var(--lilac);}
+.reel-stage {background:var(--indigo);}
+.reel-controls {background:var(--indigo);color:var(--lemon);}
+.reel-transport button {color:var(--lemon);border-color:var(--lilac);}
+.reel-transport button:hover {background:var(--orange);color:var(--indigo);}
+.reel-scrub-wrap input {accent-color:var(--orange);}
+.reel-scrub-wrap>span {color:var(--lilac);}
+.reel-scene--intro {background:var(--orange);color:var(--indigo);}
+.reel-scene--gpay {background:var(--lilac);color:var(--indigo);}
+.reel-scene--zoom {background:var(--indigo);color:var(--lemon);}
+.reel-scene--outro {background:var(--lemon);color:var(--indigo);}
+.reel-ambient--one {background:radial-gradient(ellipse,#FFFDB459 5%,transparent 68%);}
+.reel-ambient--two {background:radial-gradient(ellipse,#FFFDB467 5%,transparent 68%);}
+.reel-ambient--three {background:radial-gradient(ellipse,#F945004A 5%,transparent 68%);}
+.reel-ambient--four {background:radial-gradient(ellipse,#BCACCE75 5%,transparent 68%);}
+.reel-scribble {color:#23003F35;}
+.reel-particle-field i {color:var(--indigo);}
+.reel-scene--intro h3 em {color:var(--lemon);}
+.reel-scene--outro h3 em {color:var(--orange);}
+.reel-scene--intro .reel-subscript {color:var(--indigo);}
+.reel-gpay-phone {background:var(--lemon);border-color:var(--indigo);box-shadow:18px 27px 0 #23003F59,30px 47px 70px #23003F38;}
+.reel-notch {background:var(--indigo);}
+.reel-ui-title,.reel-ui-amount,.reel-ui-item {color:var(--indigo);}
+.reel-ui-title>span,.reel-ui-eyebrow {color:var(--orange);}
+.reel-ui-chart span {background:var(--lilac);}
+.reel-ui-chart span:nth-child(7) {background:var(--orange);}
+.reel-ui-item {border-color:#23003F36;}
+.reel-ui-item>i {background:var(--lilac);color:var(--indigo);}
+.reel-floating-note {background:var(--lemon);color:var(--indigo);border-color:var(--indigo);box-shadow:12px 13px 0 #23003F59;}
+.reel-floating-note span {color:var(--orange);}
+.reel-zoom-panel {background:var(--lilac);color:var(--indigo);border-color:var(--lemon);box-shadow:16px 20px 0 #F9450080,25px 41px 60px #07000961;}
+.reel-zoom-head {background:var(--indigo);color:var(--lemon);border-color:var(--lilac);}
+.reel-zoom-head span {color:var(--orange);}
+.reel-zoom-head small {background:var(--orange);color:var(--indigo);}
+.reel-avatar,.reel-avatar:nth-child(2),.reel-avatar:nth-child(3),.reel-avatar:nth-child(4) {color:var(--indigo);border-color:var(--indigo);}
+.reel-avatar {background:var(--lemon);}
+.reel-avatar:nth-child(2) {background:var(--orange);}
+.reel-avatar:nth-child(3) {background:var(--lilac);}
+.reel-avatar:nth-child(4) {background:var(--lemon);}
+.reel-ai-output {background:var(--lemon);color:var(--indigo);}
+.reel-ai-output>span {color:var(--indigo);}
+.reel-ai-output>i {background:var(--lilac);}
+.reel-ai-chip {background:var(--orange);color:var(--indigo);}
+.reel-floating-star {color:var(--orange);}
+.reel-orbit,.reel-orbit:after {border-color:var(--lilac);}
+.reel-orbit span {color:var(--orange);}
+.reel-outro-link {border-color:var(--indigo);}
+.reel-project-label,.reel-project-footer {color:inherit;}
+
+/* SELECTED WORK / saturated orange poster panels */
+.work {background:var(--orange);color:var(--indigo);}
+.work h2 em {color:var(--lemon);}
+.work-intro p {color:var(--indigo);}
+.project {background:var(--lemon);color:var(--indigo);border:1px solid var(--indigo);}
+.project-text {color:var(--indigo);}
+.project-text p,.project-meta,.project-sub {color:var(--indigo);}
+.project-cta {color:var(--indigo);border-color:var(--indigo);}
+.project-cta:hover {color:var(--orange);}
+.project-art--gpay {background:var(--lilac);}
+.project-art--zoom {background:var(--indigo);}
+.project-art .backwords {color:var(--indigo);}
+.project-art--zoom .backwords,.project-art--zoom .art-bottom {color:var(--lemon);}
+.project-art .art-badge {background:var(--orange);color:var(--indigo);border-color:var(--indigo);}
+.project:nth-child(2) .art-badge {background:var(--lemon);}
+.art-card {border-color:var(--indigo);box-shadow:13px 18px 32px #23003F6B;}
+.work-extra {color:var(--indigo);border-color:var(--indigo);}
+.work-extra:hover {color:var(--lemon);}
+
+/* PRODUCT THINKING / energetic lavender / yellow / orange / indigo */
+.process {background:var(--lilac);color:var(--indigo);}
+.process-header h2 em {color:var(--orange);}
+.process-header p {color:var(--indigo);}
+.process-card {background:var(--lemon);color:var(--indigo);border-color:var(--indigo);}
+.process-card:nth-child(2) {background:var(--orange);color:var(--indigo);}
+.process-card:nth-child(3) {background:var(--indigo);color:var(--lemon);}
+.process-card p,.process-card .process-number {color:var(--indigo);}
+.process-card:nth-child(3) p,.process-card:nth-child(3) .process-number {color:var(--lilac);}
+.process-card:hover {background:var(--lemon);color:var(--indigo);box-shadow:8px 10px 0 #23003F38;}
+.process-card:hover p,.process-card:hover .process-number {color:var(--indigo);}
+.process-icon,.process-icon--observe>span,.process-icon--explore span {color:var(--indigo);}
+.process-icon--observe>i,.process-icon--refine>i {border-color:var(--orange);}
+.process-icon--explore i {border-color:var(--indigo);}
+.process-icon--explore i:nth-child(1) {background:var(--lilac);}
+.process-icon--explore i:nth-child(2) {background:var(--lemon);}
+.process-icon--explore i:nth-child(3) {background:var(--orange);}
+.process-icon--refine>span {color:var(--orange);}
+.process-card:nth-child(3) .process-icon--refine>span {color:var(--orange);}
+.process-footnote {border-color:var(--indigo);color:var(--indigo);}
+.process-footnote a {color:var(--indigo);}
+.motion-ribbon {background:var(--indigo);color:var(--lemon);}
+
+/* PLAYGROUND / yellow canvas, lavender control desk */
+.playground {background:var(--lemon);color:var(--indigo);}
+.playground h2 em {color:var(--orange);}
+.playground-heading p {color:var(--indigo);}
+.lab-main {background:var(--lilac);border-color:var(--indigo);}
+.drawing-area {
+  background-color:var(--lemon);
+  background-image:linear-gradient(#23003F1C 1px,transparent 1px),
+                   linear-gradient(90deg,#23003F1C 1px,transparent 1px);
+}
+.canvas-prompt {color:var(--lilac);}
+.canvas-watermark {color:var(--indigo);}
+.lab-panel {background:var(--lilac);border-color:var(--indigo);color:var(--indigo);}
+.lab-panel h3,.lab-panel p,.lab-panel .label {color:var(--indigo);}
+.swatch {border:2px solid var(--indigo);}
+.swatch[aria-pressed=true] {outline-color:var(--orange);}
+.lab-buttons button {border-color:var(--indigo);color:var(--indigo);}
+.lab-buttons button:last-child {background:var(--indigo);color:var(--lemon);border-color:var(--indigo);}
+.lab-buttons button:hover {opacity:1;background:var(--orange);color:var(--indigo);}
+
+/* ABOUT / lavender body with deliberately art-directed object */
+.about {background:var(--lilac);color:var(--indigo);}
+.about h2 em {color:var(--orange);}
+.about-text>.large {color:var(--indigo);}
+.about-text>p:not(.large),.about-quote {color:var(--indigo);}
+.skill-chips span {background:var(--lemon);color:var(--indigo);border-color:var(--indigo);}
+.thought-btn {color:var(--indigo);border-color:var(--indigo);}
+.about-grid {border-color:var(--indigo);}
+.about-disc {background:var(--lemon);color:var(--indigo);box-shadow:22px 23px 0 #23003F55;}
+.about-disc span {color:var(--orange);}
+.about-label {background:var(--orange);color:var(--indigo);border-color:var(--indigo);}
+.about-label span {color:var(--indigo);}
+.about-footer {border-color:var(--indigo);}
+.about-footer span,.about-footer b,.about-footer a {color:var(--indigo);}
+
+/* CONTACT / bold indigo finale with vermilion marquee */
+.contact {background:var(--indigo);color:var(--lemon);}
+.contact .section-index,.contact h2,.contact-link-box {color:var(--lemon);}
+.contact h2 em {color:var(--lilac);}
+.contact-content p {color:var(--lilac);}
+.contact-email {color:var(--orange);border-bottom-color:var(--orange);}
+.contact-email:hover {color:var(--lemon);}
+.contact-link-box>span:first-child {color:var(--lemon);}
+.contact-note {color:var(--lilac);}
+.contact-marquee {border-bottom-color:#BCACCE70;opacity:1;}
+.contact-marquee span {color:var(--orange);}
+.contact-footer {color:var(--lilac);border-color:#BCACCE70;}
+.contact-footer a {color:var(--lemon);}
+
+/* MODAL / readable concept detail */
+dialog {background:var(--lemon);color:var(--indigo);border-color:var(--indigo);}
+dialog::backdrop {background:#0B001BCC;}
+.case-header {background:var(--lilac);color:var(--indigo);border-bottom-color:var(--indigo);}
+.case-close {background:var(--indigo);color:var(--lemon);}
+.case-content h3,.case-columns p {color:var(--indigo);}
+.case-columns small {color:var(--indigo);}
+.case-disclaimer {color:var(--indigo);border-color:#23003F40;}
+
+/* Keep the palette expressive but comfortable on narrow screens */
+@media (max-width:700px) {
+  .topbar {background:#23003FF8;}
+  .hero-grid {opacity:.45;}
+  .reel-shell {box-shadow:5px 6px 0 var(--orange);}
+  .reel-bar {background:var(--indigo);}
+  .reel-stage {background:var(--indigo);}
+  .process-card:nth-child(3) {color:var(--lemon);}
+  .lab-panel {border-top-color:var(--indigo);}
+}
+/* Motion toggle + system reduced-motion rules remain defined in style.css. */
