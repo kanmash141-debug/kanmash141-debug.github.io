@@ -126,8 +126,8 @@
       angle:"The idea starts with a simple question: what would an easier, calmer subscription-management experience inside an everyday payment app look like?",
       note:"Open the full original Behance case study to explore the actual design screens and process.",
       link:"https://www.behance.net/gallery/248661903/What-if-Google-Pay-managed-all-our-Subscriptions",
-      art:".project--gpay .art-card",
-      color:"#a5b4f6"
+      art:".feature-card--gpay .featured-card__visual",
+      color:"#BCACCE"
     },
     zoom:{
       id:"02 — AI / PRODUCT CONCEPT",
@@ -136,8 +136,8 @@
       angle:"The concept focuses on the meeting experience and the potential for AI-supported interactions to make collaboration more useful.",
       note:"Open the full original Behance case study to explore the actual design screens and process.",
       link:"https://www.behance.net/gallery/245805183/Zoom-AI-Virtual-Meeting-App-UI-UX-Product-Design",
-      art:".project--zoom .art-card",
-      color:"#d9ffac"
+      art:".feature-card--zoom .featured-card__visual",
+      color:"#23003F"
     }
   };
   const dialog=$("#caseDialog");
