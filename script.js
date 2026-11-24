@@ -127,7 +127,7 @@
       note:"Open the full original Behance case study to explore the actual design screens and process.",
       link:"https://www.behance.net/gallery/248661903/What-if-Google-Pay-managed-all-our-Subscriptions",
       art:".feature-card--gpay .featured-card__visual",
-      color:"#C3D9F0"
+      color:"#9BACD8"
     },
     zoom:{
       id:"02 — AI / PRODUCT CONCEPT",
@@ -137,7 +137,7 @@
       note:"Open the full original Behance case study to explore the actual design screens and process.",
       link:"https://www.behance.net/gallery/245805183/Zoom-AI-Virtual-Meeting-App-UI-UX-Product-Design",
       art:".feature-card--zoom .featured-card__visual",
-      color:"#3E2624"
+      color:"#223382"
     }
   };
   const dialog=$("#caseDialog");
@@ -178,7 +178,7 @@
   const canvas=$("#scratchCanvas");
   if(canvas){
     const ctx=canvas.getContext("2d",{alpha:true});
-    let ink="#3E2624",painting=false,last=null;
+    let ink="#111144",painting=false,last=null;
     function sizeCanvas(){
       const old=document.createElement("canvas");
       old.width=canvas.width;old.height=canvas.height;
@@ -224,7 +224,7 @@
       const output=document.createElement("canvas");
       output.width=canvas.width;output.height=canvas.height;
       const paint=output.getContext("2d");
-      paint.fillStyle="#FDEBAB";paint.fillRect(0,0,output.width,output.height);
+      paint.fillStyle="#F4F1EC";paint.fillRect(0,0,output.width,output.height);
       paint.drawImage(canvas,0,0);
       const a=document.createElement("a");a.href=output.toDataURL("image/png");
       a.download="kanmash-scratchpad.png";document.body.appendChild(a);a.click();a.remove();
