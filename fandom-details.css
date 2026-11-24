@@ -1,0 +1,152 @@
+/*
+  Kanmash / three things I keep coming back to:
+  Haikyu!! — volleyball + crow feather
+  The Office — everyday desk objects, coffee & sticky notes
+  Bleach — blade, spirit stroke and energy traces
+  Original symbolic SVG icon designs; no borrowed character artwork or logos.
+  Loaded after MP113 gradients. Respect motion toggle, reduced-motion and cards' 3D transforms.
+*/
+.fandom-sprite{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none;visibility:hidden}
+.fandom-icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;overflow:visible}
+.fandom-icon--thin{stroke-width:2.25}
+.fandom-icon--filled{fill:currentColor;stroke:none}
+
+/* HERO: three recognizable but unobtrusive motifs, respecting the original grid. */
+.hero .hero-motion-pattern span{font-weight:500;letter-spacing:.08em;opacity:.8}
+.hero-float--volleyball{top:17%;right:6%;font-size:82px;opacity:.86;color:#F98513;transform-origin:center}
+.hero-float--feather{left:44%;bottom:17%;font-size:60px;color:#9BACD8;opacity:.95}
+.hero-float--volleyball .fandom-icon,.hero-float--feather .fandom-icon{display:block;width:1em;height:1em;filter:drop-shadow(0 8px 10px rgba(17,17,68,.17))}
+.hero .hi-mark{display:inline-flex;align-items:center;justify-content:center;font-size:24px;vertical-align:-.15em;color:#F98513;animation:haikyu-float 6s ease-in-out infinite}
+.hero .hi-mark .fandom-icon{stroke-width:2.2}
+.hero-asterisk{font-size:.63em;color:#F98513;animation:haikyu-ball-turn 22s linear infinite}
+.hero-asterisk .fandom-icon{vertical-align:baseline}
+.desk-stamp{font-size:76px;right:9%;top:5%;color:#9BACD8;animation:bleach-tilt 12s ease-in-out infinite alternate}
+.desk-stamp .fandom-icon{display:block;width:1em;height:1em;stroke-width:1.7}
+.desk-paper{isolation:isolate;overflow:hidden}
+.desk-paper__coffee{position:absolute;right:10px;top:10px;color:#223382;font-size:37px;opacity:.9;transform:rotate(12deg)}
+.desk-paper__coffee .fandom-icon{display:block;width:1em;height:1em}
+.desk-paper__micro{font-size:8px;letter-spacing:.09em;opacity:.72;display:block;margin-top:10px}
+.fandom-court-line{position:absolute;pointer-events:none;right:6%;bottom:5%;width:150px;height:88px;border:1px dashed rgba(155,172,216,.25);border-radius:50%;transform:rotate(-20deg);z-index:0}
+.fandom-hero-sticker{position:absolute;z-index:2;top:8%;left:5%;pointer-events:none;display:flex;align-items:center;gap:7px;background:rgba(244,241,236,.78);color:#111144;padding:8px 11px;transform:rotate(-8deg);border:1px solid rgba(17,17,68,.26);box-shadow:4px 5px 0 rgba(17,17,68,.17);font:500 9px var(--mono);letter-spacing:.04em}
+.fandom-hero-sticker .fandom-icon{font-size:17px;color:#F98513}
+
+/* MOTION REEL: replace generic star particles with original fandom pictograms */
+.reel-scribble{font-size:clamp(210px,28vw,390px);top:1%;right:-1%;width:1em;height:1em;opacity:.15;animation:bleach-tilt 20s ease-in-out infinite alternate}
+.reel-scribble .fandom-icon{display:block;width:1em;height:1em;stroke-width:1.2}
+.reel-particle-field i{display:grid;place-items:center;font-style:normal;min-width:1em;min-height:1em}
+.reel-particle-field i .fandom-icon{display:block;width:1em;height:1em;stroke-width:1.8;filter:drop-shadow(0 3px 2px rgba(17,17,68,.06))}
+.reel-particle-field i:nth-child(1){color:#F98513}
+.reel-particle-field i:nth-child(2){color:#223382}
+.reel-particle-field i:nth-child(3){color:#111144}
+.reel-particle-field i:nth-child(4){color:#F98513}
+.reel-particle-field i:nth-child(5){color:#223382}
+.reel-floating-star{font-size:116px;color:#F98513;animation:bleach-tilt 11s ease-in-out infinite alternate}
+.reel-floating-star .fandom-icon{display:block;width:1em;height:1em;stroke-width:1.55}
+.reel-orbit span{display:grid;place-items:center}
+.reel-orbit span .fandom-icon{display:block;width:1em;height:1em;stroke-width:1.8}
+.reel-orbit span:nth-child(1){color:#F98513}
+.reel-orbit span:nth-child(2){color:#9BACD8}
+.reel-orbit span:nth-child(3){color:#F4F1EC}
+
+/* FEATURED: tiny collectible marks, never obscure project titles or actions. */
+.featured-mark{display:inline-grid;place-items:center;min-width:21px;min-height:21px;font-size:19px;color:#223382}
+.featured-mark .fandom-icon{display:block;width:1em;height:1em;stroke-width:2.35}
+.featured-back-symbol{background:linear-gradient(145deg,#223382,#111144);color:#F4F1EC;border:1px solid rgba(255,255,255,.58)}
+.featured-back-symbol .fandom-icon{width:20px;height:20px;stroke-width:2.45;vertical-align:middle}
+.featured-archive-star{font-size:43px;top:4%;right:9%;color:#111144}
+.featured-archive-star .fandom-icon{display:block;width:1em;height:1em;stroke-width:2.3}
+.featured-stage-foot .fandom-icon{width:15px;height:15px;vertical-align:-.2em;color:#F98513}
+.fandom-card-label{display:inline-flex;align-items:center;gap:5px;font:500 8px/1.25 var(--mono);color:#223382;letter-spacing:.02em}
+.fandom-card-label .fandom-icon{font-size:11px}
+
+/* THE THREE MOTIFS become the three visual ideas of the design process. */
+.process-icon .fandom-icon{width:1em;height:1em;stroke-width:1.8;display:block;filter:drop-shadow(0 10px 8px rgba(17,17,68,.1))}
+.process-icon--observe>span{font-size:145px;color:#223382;animation:haikyu-float 7s ease-in-out infinite}
+.process-icon--explore span{font-size:100px;color:#F98513;animation:haikyu-ball-turn 19s linear infinite}
+.process-icon--refine>span{font-size:142px;color:#F98513;animation:bleach-tilt 10s ease-in-out infinite alternate}
+.process-icon--observe>i{border-color:rgba(34,51,130,.4)}
+.process-icon--refine>i{border-color:rgba(249,133,19,.55)}
+.process-card:nth-child(3) .process-icon--refine>span{color:#F98513}
+.fandom-process-tag{position:absolute;top:14px;right:15px;display:flex;align-items:center;gap:6px;font:500 9px/1.2 var(--mono);letter-spacing:.06em;opacity:.78;color:#223382}
+.process-card:nth-child(3) .fandom-process-tag{color:#F4F1EC}
+.fandom-process-tag .fandom-icon{width:14px;height:14px}
+
+/* PERSONAL INTERESTS: explicit Easter eggs in About, separate from actual skills. */
+.fandom-shelf{margin-top:28px;max-width:590px}
+.fandom-shelf__eyebrow{display:flex;align-items:center;gap:8px;color:#223382;font:500 9px/1.2 var(--mono);letter-spacing:.16em;margin-bottom:11px}
+.fandom-shelf__eyebrow::before{content:"";height:1px;flex:1;max-width:23px;background:currentColor;opacity:.55}
+.fandom-shelf__items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.fandom-shelf__item{
+  position:relative;display:flex;flex-direction:column;align-items:start;justify-content:space-between;
+  min-height:104px;gap:7px;padding:11px 10px 10px;border:1px solid rgba(255,255,255,.8);
+  background:linear-gradient(145deg,rgba(244,241,236,.75),rgba(155,172,216,.38));
+  border-radius:12px;box-shadow:0 8px 18px rgba(17,17,68,.11),inset 1px 1px 0 rgba(255,255,255,.77);
+  color:#111144;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s;
+}
+.fandom-shelf__item:nth-child(2){background:linear-gradient(145deg,rgba(218,209,200,.8),rgba(244,241,236,.66))}
+.fandom-shelf__item:nth-child(3){background:linear-gradient(145deg,rgba(155,172,216,.8),rgba(34,51,130,.19))}
+.fandom-shelf__item:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:0 13px 25px rgba(17,17,68,.17),inset 1px 1px 0 rgba(255,255,255,.8)}
+.fandom-shelf__item .fandom-icon{font-size:25px;stroke-width:2.15;color:#223382}
+.fandom-shelf__item:nth-child(2) .fandom-icon{color:#F98513}
+.fandom-shelf__item:nth-child(3) .fandom-icon{color:#111144}
+.fandom-shelf__item b{display:block;font:650 11px/1.2 var(--font);letter-spacing:-.01em}
+.fandom-shelf__item small{display:block;font:450 9px/1.15 var(--mono);color:#223382;opacity:.8;letter-spacing:.02em}
+.about-label span{display:inline-flex;vertical-align:-.14em;font-size:16px;color:#111144}
+.about-label .fandom-icon{display:block;width:1em;height:1em}
+.fandom-photo-sticker{position:absolute;z-index:4;left:3%;top:13%;display:flex;align-items:center;gap:5px;transform:rotate(-10deg);padding:6px 7px;background:rgba(244,241,236,.89);border:1px solid rgba(17,17,68,.32);color:#111144;box-shadow:3px 4px 0 rgba(17,17,68,.15);font:500 9px var(--mono)}
+.fandom-photo-sticker .fandom-icon{font-size:15px}
+
+/* Playground and footer: little pieces of the fandom language, not a fan-art takeover. */
+.canvas-prompt .fandom-icon{width:16px;height:16px;vertical-align:-.2em;color:#223382}
+.fandom-canvas-corner{position:absolute;right:13px;bottom:14px;pointer-events:none;color:#223382;opacity:.35;font-size:28px;transform:rotate(-12deg)}
+.fandom-canvas-corner .fandom-icon{width:1em;height:1em}
+.contact-marquee .fandom-icon{display:inline-block;width:.57em;height:.57em;vertical-align:-.015em;color:#F98513;stroke-width:1.8}
+.contact-marquee span{display:inline-flex;align-items:center;gap:clamp(14px,2vw,36px)}
+.contact-marquee span .fandom-icon{will-change:transform}
+.contact-link-box .fandom-contact-memo{display:inline-flex;align-items:center;gap:8px;margin-top:9px;color:#9BACD8;font:400 10px/1.3 var(--mono);letter-spacing:.08em}
+.fandom-contact-memo .fandom-icon{width:20px;height:20px;color:#F98513}
+.contact-footer__coffee{display:inline-flex;align-items:center;gap:6px}
+.contact-footer__coffee .fandom-icon{width:15px;height:15px;color:#F98513}
+/* sticker animation loops are slow, restrained and GPU-friendly */
+@keyframes haikyu-float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+@keyframes haikyu-ball-turn{to{transform:rotate(360deg)}}
+@keyframes bleach-tilt{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(9deg)}}
+/* Do not impact custom hero parallax, 3D card flip, drag listeners or scrolling. */
+.motion-off .hero-float,.motion-off .hi-mark,.motion-off .hero-asterisk,.motion-off .desk-stamp,
+.motion-off .reel-scribble,.motion-off .reel-floating-star,.motion-off .featured-archive-star,
+.motion-off .process-icon>span{animation:none!important}
+@media(max-width:950px){
+  .hero-float--volleyball{font-size:59px;top:11%;right:3%}
+  .hero-float--feather{font-size:48px;left:35%;bottom:14%}
+  .fandom-hero-sticker{display:none}
+  .process-icon--observe>span{font-size:115px}
+  .process-icon--explore span{font-size:82px}
+  .process-icon--refine>span{font-size:105px}
+}
+@media(max-width:700px){
+  .hero-float--volleyball{font-size:39px;top:6%;right:3%}
+  .hero-float--feather{display:none}
+  .hero .hi-mark{font-size:18px}
+  .hero-asterisk{font-size:.48em}
+  .desk-stamp{font-size:47px}
+  .desk-paper__coffee{font-size:27px}
+  .reel-scribble{font-size:190px;top:0;right:-5%}
+  .reel-floating-star{font-size:65px}
+  .reel-particle-field i .fandom-icon{stroke-width:2}
+  .fandom-shelf__items{gap:6px}
+  .fandom-shelf__item{min-height:99px;padding:10px 7px}
+  .fandom-shelf__item b{font-size:10px}
+  .fandom-shelf__item small{font-size:8px}
+  .fandom-photo-sticker{top:9%;left:0}
+  .contact-marquee span{gap:14px}
+}
+@media(max-width:370px){
+  .fandom-shelf__items{grid-template-columns:1fr}
+  .fandom-shelf__item{min-height:68px;display:grid;grid-template-columns:30px 1fr;align-items:center;gap:8px}
+  .fandom-shelf__item .fandom-icon{grid-row:span 2}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-float--volleyball,.hero-float--feather,.hero .hi-mark,.hero-asterisk,.desk-stamp,
+  .reel-scribble,.reel-floating-star,.featured-archive-star,.process-icon>span{animation:none!important}
+  .fandom-shelf__item{transition:none!important}
+}
