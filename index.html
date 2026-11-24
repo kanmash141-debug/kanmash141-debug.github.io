@@ -15,11 +15,9 @@
 <link rel="stylesheet" href="./theme.css?v=3">
 <link rel="stylesheet" href="./featured.css?v=2">
 <link rel="stylesheet" href="./mp113-gradients.css?v=1">
-<link rel="stylesheet" href="./character-hero.css?v=2">
 <script defer src="./script.js?v=5"></script>
 <script defer src="./motion.js?v=1"></script>
 <script defer src="./featured.js?v=2"></script>
-<script defer src="./character-hero.js?v=2"></script>
 </head>
 <body>
 <a class="skip-link" href="#work">Skip to featured work</a>
@@ -27,7 +25,7 @@
 <div class="loader" id="loader" aria-hidden="true"><div class="loader-inner"><span>k.</span><span>LOADING STUDIO <span id="loadCount">00</span>%</span></div></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="custom-cursor" id="cursor" aria-hidden="true">OPEN ↗</div>
-<header class="topbar" id="top">
+<header class="topbar">
   <a class="wordmark" href="#top" aria-label="Kanmash — back to top"><span class="brand-symbol brand-symbol--photo" aria-hidden="true"><img src="./assets/kanmash-about-hd.webp?v=1" alt="" width="960" height="1280" fetchpriority="high" decoding="async"></span><span>kanmash<span class="wordmark-dot">®</span></span></a>
   <div class="topbar-center">PRODUCT DESIGNER <span class="nav-divider">/</span> INDIA <span class="status-dot" aria-label="Available to connect"></span></div>
   <nav class="topnav" aria-label="Main navigation">
@@ -40,38 +38,20 @@
   </nav>
 </header>
 <main>
-<section class="hero hero--character" id="home" aria-labelledby="heroTitle">
-  <div class="hero-poster" id="characterHeroPoster" aria-label="Interactive animated Kanmash portfolio cover">
-    <div class="hero-poster__top" aria-hidden="true"></div>
-    <div class="hero-poster__bottom" aria-hidden="true"></div>
-    <div class="hero-poster__noise" aria-hidden="true"></div>
-    <div class="hero-poster__meta"><span>✳ &nbsp; KANMASH / PORTFOLIO</span><b>PRODUCT DESIGN <span class="hero-meta-star" aria-hidden="true">✷</span> 2026</b></div>
-    <div class="hero-poster__lettering">
-      <h1 class="hero-poster__title" id="heroTitle"><span class="title-port">Port</span><span class="title-folio">folio<span class="title-period">.</span></span></h1>
-      <span class="hero-poster__year">2026</span>
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-motion-pattern" aria-hidden="true"><span>DESIGN ✳ PEOPLE ✳ PLAY ✳</span><span>DESIGN ✳ PEOPLE ✳ PLAY ✳</span></div>
+  <div class="hero-float hero-float--a" aria-hidden="true">✦</div><div class="hero-float hero-float--b" aria-hidden="true">✴</div>
+  <div class="hero-topline"><span>INDEPENDENT THOUGHTS & DESIGN EXPERIMENTS</span><span>PORTFOLIO / 2026</span></div>
+  <div class="hero-body">
+    <div class="hero-words reveal">
+      <div class="supra"><span class="hi-mark" aria-hidden="true">✳</span> Hello, glad you're here.</div>
+      <h1 id="heroTitle" class="kinetic-title"><span class="kinetic-line"><span>I'm <em>Kanmash.</em></span></span><span class="kinetic-line"><span>Designer of</span></span><span class="kinetic-line"><span>little things <span class="hero-asterisk" aria-hidden="true">✳</span></span></span></h1>
+      <p class="subcopy">I design digital experiences that feel simple, thoughtful, and sometimes a little unexpected. I enjoy the space where <strong>product thinking meets visual play.</strong></p>
+      <div class="hero-actions"><a class="primary-btn" href="#work">Explore featured work <span aria-hidden="true">↗</span></a><a href="#about" class="plain-btn">A little about me <span aria-hidden="true">↘</span></a></div>
+      <div class="hero-aside"><span>01 — TWO IDEAS I'VE BEEN WORKING ON</span><span>↓ KEEP SCROLLING</span></div><div class="hero-timeline" aria-hidden="true"><span>01 / INTRO</span><div><i></i></div><span>04 / LET’S TALK</span></div>
     </div>
-    <div class="hero-poster__overprint" aria-hidden="true">✳ &nbsp; ✦ &nbsp; ✳</div>
-    <p class="hero-poster__annotation">Selected work in<br><strong>product design,<br>UI/UX, AI &amp;<br>playful interactions.</strong></p>
-    <div class="hero-figure" id="characterFigure">
-      <div class="hero-figure__float">
-        <div class="hero-figure__tilt" id="characterTilt">
-          <img class="hero-figure__img" src="./assets/kanmash-character-3d.webp?v=1" width="1287" height="1222" fetchpriority="high" decoding="async" alt="Stylized 3D animated head of Kanmash wearing an olive green cap, with expressive cursor-following eyes">
-          <span class="character-eye character-eye--left" aria-hidden="true"><span class="character-iris"></span><span class="character-eyelid"></span></span>
-          <span class="character-eye character-eye--right" aria-hidden="true"><span class="character-iris"></span><span class="character-eyelid"></span></span>
-        </div>
-      </div>
-    </div>
-    <span class="hero-sparkle" aria-hidden="true">✦</span>
-    <div class="hero-poster__buttons">
-      <button type="button" class="hero-poster__button" id="characterExpand" aria-label="Expand animated hero" aria-pressed="false" title="Expand artwork">⤢</button>
-      <button type="button" class="hero-poster__button" id="characterExpression" aria-label="Make the character wink" title="Make me wink">⟳</button>
-    </div>
-    <div class="hero-poster__bottomline"><span><strong>DESIGNER</strong> &amp; CURIOUS HUMAN</span><a href="#work">EXPLORE SELECTED WORK ↗</a></div>
-  </div>
-  <div class="hero-poster__credit"><span>BASED IN INDIA &nbsp; ✳ &nbsp; BUILT WITH CURIOSITY</span><span>MOVE YOUR CURSOR TO MEET THE EYES &nbsp; ↗</span></div>
-
-<details class="hero-extra-desk"><summary>✳ &nbsp; OPEN MY DRAGGABLE DESIGN DESK <span>INTERACTIVE WORKSPACE</span></summary>
-<div class="hero-desk" aria-label="Draggable interactive project previews">
+    <div class="hero-desk" aria-label="Draggable interactive project previews">
       <div class="desk-orbit" aria-hidden="true"></div>
       <span class="desk-note" aria-hidden="true">psst… you can drag these ↙</span>
       <article class="window window-one" aria-label="Google Pay subscriptions concept">
@@ -101,7 +81,8 @@
       <div class="desk-paper" aria-hidden="true"><span>IDEA NO. 01</span><b>What if<br>it felt easy?</b><small>↳ a question worth asking</small></div>
       <div class="desk-stamp" aria-hidden="true">✳</div>
     </div>
-</details>
+  </div>
+  <div class="hero-footer"><span><span class="availability" aria-hidden="true"></span> CURRENTLY MAKING THINGS</span><span>NEW DELHI, INDIA / <span id="clock">IST</span></span><a href="#work">SCROLL TO DISCOVER ↓</a></div>
 </section>
 <section class="motion-reel" id="motion-reel" aria-labelledby="reelTitle">
  <div class="reel-heading reveal"><div class="section-index">01 <span class="rule"></span> A reel of moving ideas</div><div class="reel-heading-grid"><h2 id="reelTitle" data-text-reveal>Thinking in<br><em>motion.</em><span aria-hidden="true"> ↗</span></h2><p>Interfaces are more than static screens. Here are a few small motion experiments that explore how they could feel.</p></div></div>
