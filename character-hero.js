@@ -9,8 +9,8 @@
   const gazeAnchor = document.getElementById('characterFigure');
   if (!poster || !tilt || !gazeAnchor) return;
   const eyes = [...gazeAnchor.querySelectorAll('.character-eye')];
-  let gazeLimits = eyes.map(e=>Math.max(3,e.getBoundingClientRect().width*.125));
-  const measureEyes=()=>{gazeLimits=eyes.map(e=>Math.max(3,e.getBoundingClientRect().width*.125));};
+  let gazeLimits = eyes.map(e=>Math.max(3,e.getBoundingClientRect().width*.085));
+  const measureEyes=()=>{gazeLimits=eyes.map(e=>Math.max(3,e.getBoundingClientRect().width*.085));};
   window.addEventListener('resize',measureEyes,{passive:true});
   const expand = document.getElementById('characterExpand');
   const expression = document.getElementById('characterExpression');
